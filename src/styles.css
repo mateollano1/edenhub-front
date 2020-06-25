@@ -1,12 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
-
-/* .background {
+.background {
     background-image: url('assets/imgs/eat.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-} */
+}
 
 .center {
     text-align: center;
@@ -32,4 +31,12 @@ body {
 
 .lora {
     font-family: 'Lora', serif;
+}
+
+.lato {
+    font-family: 'Lato', sans-serif;
+}
+
+.quickSand {
+    font-family: 'Quicksand', sans-serif;
 }

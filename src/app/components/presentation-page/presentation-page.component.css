@@ -15,12 +15,12 @@
         background: rgba(255, 255, 255, 0);
     }
     .wpp-icon {
-        background: #3cdc16;
+        background: #2db742;
         border-radius: 600px;
         padding: 25px 25px;
         border: 1px solid #ffffff;
         color: white;
-        font-size: 40px;
+        font-size: 30px;
     }
     .buy-button {
         float: right;
@@ -39,7 +39,7 @@
         padding: 25px 25px;
         border: 1px solid #ffffff;
         color: white;
-        font-size: 40px;
+        font-size: 30px;
     }
 }
 
@@ -67,7 +67,7 @@
         background: rgba(255, 255, 255, 0);
     }
     .wpp-icon {
-        background: #3cdc16;
+        background: #2db742;
         border-radius: 600px;
         padding: 10px 10px;
         border: 1px solid #ffffff;
@@ -106,7 +106,7 @@
 
 .container {
     width: 100%;
-    height: 100%;
+    height: 83%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,7 +119,7 @@ input[type=text] {
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 100;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     border: solid 2px;
     border-radius: 8px;
     background: linear-gradient(to right, #FFFFFF 0%, #464747 #F9F9F9 100%);
@@ -128,8 +128,8 @@ input[type=text] {
 
 i {
     position: relative;
-    left: -37px;
-    color: #8233C5;
+    left: -38px;
+    color: #FF6600;
 }
 
 .mini-card {
@@ -139,8 +139,8 @@ i {
 }
 
 .base {
-    height: 80px;
-    width: 300px;
+    /* height: 80px;
+    width: 300px; */
     background: #d33;
     position: relative;
     margin-top: 100px;
@@ -150,12 +150,19 @@ i {
 
 .circle {
     position: absolute;
-    height: 100px;
-    width: 100px;
+    height: 250px;
+    width: 250px;
     border-radius: 50%;
     border: 3px solid white;
-    left: 50%;
+    left: 40%;
     margin-left: -55px;
-    top: -40px;
-    background: #d33;
+    top: -90px;
+    background: #FFEEAA;
+}
+
+.categorias {
+    background-image: url('../../../assets/imgs/ex.jpg');
+    background-repeat: no-repeat;
+    /* background-attachment: fixed;
+    background-size: cover; */
 }
