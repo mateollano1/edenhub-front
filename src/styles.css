@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+/* .background {
+    background-image: url('assets/imgs/eat.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+} */
+
+.center {
+    text-align: center;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.lora {
+    font-family: 'Lora', serif;
+}
