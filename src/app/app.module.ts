@@ -10,13 +10,15 @@ import { PresentationPageComponent } from './components/presentation-page/presen
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContactUsComponent } from './components/shared/contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PresentationPageComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
