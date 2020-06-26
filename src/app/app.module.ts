@@ -11,6 +11,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactUsComponent } from './components/shared/contact-us/contact-us.component';
+import { CategoriesComponent } from './components/categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ContactUsComponent } from './components/shared/contact-us/contact-us.co
     PresentationPageComponent,
     NavbarComponent,
     FooterComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,

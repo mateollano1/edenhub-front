@@ -3,8 +3,17 @@
 .background {
     background-image: url('assets/imgs/eat.jpg');
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-size: cover;
+}
+
+.background-wood {
+    background-image: url('assets/imgs/wood1.jpg');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    /* background-attachment: fixed; */
+    /* background-size: cover; */
 }
 
 .center {
@@ -39,4 +48,9 @@ body {
 
 .quickSand {
     font-family: 'Quicksand', sans-serif;
+}
+
+.centerCard {
+    justify-content: center;
+    display: flex;
 }
