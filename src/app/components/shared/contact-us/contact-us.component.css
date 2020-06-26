@@ -892,7 +892,7 @@
     height: 100%;
     left: 0;
     top: 0;
-    /* background: transparent url('../img/whatsapp_logo.svg') center center no-repeat; */
+    background: transparent url('../../../../assets/imgs/wpp.png') center center no-repeat;
     background-size: 30px auto;
     -webkit-background-size: 30px auto;
     -moz-background-size: 30px auto;
@@ -910,7 +910,7 @@
     height: 100%;
     left: 0;
     top: 0;
-    /* background: transparent url('../img/x_icon.svg') center center no-repeat; */
+    background: transparent url('../../../../assets/imgs/close.png') center center no-repeat;
     background-size: 14px auto;
     -webkit-background-size: 14px auto;
     -moz-background-size: 14px auto;
