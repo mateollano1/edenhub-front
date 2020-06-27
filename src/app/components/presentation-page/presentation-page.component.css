@@ -3,44 +3,6 @@
         width: 40rem;
         height: 30rem;
     }
-    .wpp-button {
-        float: right;
-        bottom: 198px;
-        /* left: 0; */
-        max-width: 500px;
-        border-radius: 15px 0px 0px 0px;
-        padding: 12px 17px 1px;
-        position: fixed;
-        border: 1px rgba(255, 255, 255, 0) solid;
-        background: rgba(255, 255, 255, 0);
-    }
-    .wpp-icon {
-        background: #2db742;
-        border-radius: 600px;
-        padding: 25px 25px;
-        border: 1px solid #ffffff;
-        color: white;
-        font-size: 30px;
-    }
-    .buy-button {
-        float: right;
-        bottom: 90px;
-        /* left: 0; */
-        max-width: 500px;
-        border-radius: 15px 0px 0px 0px;
-        padding: 12px 17px 1px;
-        position: fixed;
-        border: 1px rgba(255, 255, 255, 0) solid;
-        background: rgba(255, 255, 255, 0);
-    }
-    .buy-icon {
-        background: #FF6600;
-        border-radius: 600px;
-        padding: 25px 25px;
-        border: 1px solid #ffffff;
-        color: white;
-        font-size: 30px;
-    }
     .circle {
         position: absolute;
         height: 250px;
@@ -65,44 +27,6 @@
     .presentation {
         width: 20rem;
         /* height: 30rem; */
-    }
-    .wpp-button {
-        float: right;
-        bottom: 148px;
-        /* left: 0; */
-        max-width: 500px;
-        border-radius: 15px 0px 0px 0px;
-        padding: 12px 17px 1px;
-        position: fixed;
-        border: 1px rgba(255, 255, 255, 0) solid;
-        background: rgba(255, 255, 255, 0);
-    }
-    .wpp-icon {
-        background: #2db742;
-        border-radius: 600px;
-        padding: 10px 10px;
-        border: 1px solid #ffffff;
-        color: white;
-        font-size: 30px;
-    }
-    .buy-button {
-        float: right;
-        bottom: 90px;
-        /* left: 0; */
-        max-width: 500px;
-        border-radius: 15px 0px 0px 0px;
-        padding: 12px 17px 1px;
-        position: fixed;
-        border: 1px rgba(255, 255, 255, 0) solid;
-        background: rgba(255, 255, 255, 0);
-    }
-    .buy-icon {
-        background: #FF6600;
-        border-radius: 600px;
-        padding: 10px 10px;
-        border: 1px solid #ffffff;
-        color: white;
-        font-size: 30px;
     }
     .circle {
         position: absolute;

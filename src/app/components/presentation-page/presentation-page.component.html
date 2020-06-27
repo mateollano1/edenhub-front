@@ -19,21 +19,21 @@
                         </div>
                         <div class="row quickSand centerCard mt-4" style="font-size: 20px;">
                             <div class="col-md-4">
-                                <div class="card categorias mini-card shadow-lg " style="border-radius: 0.75rem!important; " type="button">
+                                <div class="card categorias mini-card shadow-lg " [routerLink]="['/categorias']" routerLinkActive="router-link-active" style="border-radius: 0.75rem!important; " type="button">
                                     <span>
                                 Categorias
                             </span>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="card categorias shadow-lg mini-card" style="border-radius: 0.75rem!important" type="button">
+                                <div class="card categorias shadow-lg mini-card" [routerLink]="['/categorias/promociones']" routerLinkActive="router-link-active" style="border-radius: 0.75rem!important" type="button">
                                     <span>
                                 Promociones
                             </span>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="card categorias shadow-lg mini-card" style="border-radius: 0.75rem!important" type="button">
+                                <div class="card categorias shadow-lg mini-card" [routerLink]="['/categorias/regalos']" routerLinkActive="router-link-active" style="border-radius: 0.75rem!important" type="button">
                                     <span>
                                 Regalos
                             </span>
@@ -49,34 +49,3 @@
         </div>
     </div>
 </div>
-
-<div style="display: flex;">
-    <!-- <a class="wpp-button " type="button">
-        <span class="wpp-icon material-icons">local_phone</span>
-    </a> -->
-    <a class="buy-button" type="button">
-        <span class="buy-icon material-icons">shopping_cart</span>
-    </a>
-    <app-contact-us></app-contact-us>
-</div>
-
-<div style="display: flex;">
-    <a class="wpp-button " type="button">
-        <span class="wpp-icon material-icons">local_phone</span>
-    </a>
-    <a class="buy-button" type="button">
-        <span class="buy-icon material-icons">shopping_cart</span>
-    </a>
-    <app-contact-us></app-contact-us>
-</div>
-
-
-<!-- </div> -->
-<!-- <a style="float: right;bottom: 63px; left: 0; max-width: 700px; border-radius: 25px 0px 0px 0px; padding: 12px 17px 1px; position: fixed; z-index: 99999; border: 1px rgba(255, 255, 255, 0) solid; background: rgba(255, 255, 255, 0);" type="button" data-toggle=""
-    data-target=".navbar-collapse" href="tel:3008012948" onclick="ga('send', 'event', { eventCategory: 'Llamada', eventAction: 'Click to call', eventLabel: 'Landing'});">
-    <span class="material-icons" style="background: #3cdc16; border-radius: 600px; padding: 15px 15px; border: 1px solid #ffffff; color:white">-</span>
-</a>
-<a style="float: right;bottom: 108px; left: 0; max-width: 700px; border-radius: 15px 0px 0px 0px; padding: 12px 17px 1px; position: fixed; z-index: 99999; border: 1px rgba(255, 255, 255, 0) solid; background: rgba(255, 255, 255, 0);" type="button" data-toggle=""
-    data-target=".navbar-collapse" href="tel:3008012948" onclick="ga('send', 'event', { eventCategory: 'Llamada', eventAction: 'Click to call', eventLabel: 'Landing'});">
-    <span class="material-icons" style="background: #3cdc16; border-radius: 600px; padding: 15px 15px; border: 1px solid #ffffff; color:white">local_phone</span>
-</a> -->

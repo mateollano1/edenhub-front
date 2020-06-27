@@ -1,3 +1,26 @@
+.buy-button {
+    float: right;
+    bottom: 100px;
+    margin-right: 15em;
+    /* left: -2; */
+    right: -14.3em;
+    max-width: 500px;
+    border-radius: 15px 0px 0px 0px;
+    padding: 12px 17px 1px;
+    position: fixed;
+    border: 1px rgba(255, 255, 255, 0) solid;
+    background: rgba(255, 255, 255, 0);
+}
+
+.buy-icon {
+    background: #FF6600;
+    border-radius: 300px;
+    padding: 14px 14px;
+    border: 1px solid #FF6600;
+    color: white;
+    font-size: 30px;
+}
+
 #nta-wa-gdpr {
     vertical-align: text-top !important;
     padding: 0 !important;
@@ -528,9 +551,10 @@
     -moz-background-size: 100% 100%;
 }
 
-.wa__popup_chat_box .wa__stt.wa__stt_offline:after {
-    /* background-image: url('../img/whatsapp_logo_gray_sm.svg'); */
-}
+
+/* .wa__popup_chat_box .wa__stt.wa__stt_offline:after {
+    background-image: url('../img/whatsapp_logo_gray_sm.svg');
+} */
 
 .wa__popup_chat_box .wa__stt.wa__stt_online {
     transition: 0.2s ease all;
@@ -717,11 +741,12 @@
     -moz-transition: 0.2s ease background-image;
 }
 
-.wa__popup_call_btn.wa__popup_call_btn_lg:hover:before,
+
+/* .wa__popup_call_btn.wa__popup_call_btn_lg:hover:before,
 .wa__popup_call_btn.wa__popup_call_btn_lg:focus:before,
 .wa__popup_call_btn.wa__popup_call_btn_lg:active:before {
-    /* background-image: url('../img/whatsapp_logo.svg') */
-}
+    background-image: url('../img/whatsapp_logo.svg')
+} */
 
 .wa__popup_chat_box_gray {
     border-radius: 2px 2px 8px 8px;
