@@ -15,9 +15,6 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { SearchPageComponent } from './components/search-page/search-page.component';
 import { ProductComponent } from './components/shared/product/product.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ProductsCategoriesComponent } from './components/products-categories/products-categories.component';
-import { FinishBuyComponent } from './components/finish-buy/finish-buy.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,16 +24,14 @@ import { FinishBuyComponent } from './components/finish-buy/finish-buy.component
     ContactUsComponent,
     CategoriesComponent,
     SearchPageComponent,
-    ProductComponent,
-    ProductsCategoriesComponent,
-    FinishBuyComponent
+    ProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
