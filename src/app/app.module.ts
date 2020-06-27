@@ -14,6 +14,8 @@ import { ContactUsComponent } from './components/shared/contact-us/contact-us.co
 import { CategoriesComponent } from './components/categories/categories.component';
 import { SearchPageComponent } from './components/search-page/search-page.component';
 import { ProductComponent } from './components/shared/product/product.component';
+import { ProductsCategoriesComponent } from './components/products-categories/products-categories.component';
+import { FinishBuyComponent } from './components/finish-buy/finish-buy.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ContactUsComponent,
     CategoriesComponent,
     SearchPageComponent,
-    ProductComponent
+    ProductComponent,
+    ProductsCategoriesComponent,
+    FinishBuyComponent
   ],
   imports: [
     BrowserModule,
