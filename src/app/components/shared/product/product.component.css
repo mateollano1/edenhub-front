@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
-
 .circle {
     position: absolute;
     height: 35px;
@@ -11,24 +10,16 @@
     top: 120px;
     /* background: #FFEEAA; */
 }
-.product{
-    text-align:left;
-    height:300px;
-    width:400px;
+
+.product {
+    text-align: center;
+    height: 90%;
+    width: 100%;
     border-radius: 2%;
 }
 
-.modal-body{
+.modal-body {
     height: 100px;
     width: 100%;
     overflow-y: auto;
-  }
-
-
-
-
-
-
-
-
-
+}
