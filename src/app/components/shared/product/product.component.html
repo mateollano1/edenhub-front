@@ -1,6 +1,6 @@
-<div class="card shadow-lg " style="width: 16em; border-radius: 1.25rem!important">
+<div class="card shadow-lg " style="width: 16em; height:25em; border-radius: 1.25rem!important">
     <img class="card-img-top" height="160" width="240" style="border-top-left-radius: 1.25rem!important; border-top-right-radius: 1.25rem!important" src="../../../../assets/imgs/hambur.jpeg" alt="Card image cap">
-    <div class="card shadow-lg circle">
+    <!-- <div class="card shadow-lg circle">
         <div class="row">
             <div class="col-md-6 centerCard">
                 <a class="mt-1 ml-3">
@@ -11,42 +11,41 @@
                 -
             </div>
         </div>
-    </div>
+    </div> -->
     <h5 class="card-title m-2 center montserrat">Hamburguesa doble carne</h5>
     <div class="row">
         <div class="col-md-5">
             <p class="card-text montserrat m-2"><strong>Precio: </strong> </p>
         </div>
+        
         <div class="col-md-7">
             <p class="card-text roboto m-2">$18.000 COP </p>
+        </div> 
+    </div>
+    <div class="row">
+        <div class="col-md-5 ml-2 mt-2 ">
+            <p class="card-text montserrat "><strong>Cantidad:</strong> </p>
+        </div>
+        <div class="col-2 ml-2 mt-2">
+            <img src="../../../../assets/imgs/mas.png" width="15px" height="15px">
+        </div>
+        <div class="col-2 mt-2 ">
+            1   
+        </div>
+        <div class="col-2 mt-2">
+            <img src="../../../../assets/imgs/menos.png" width="15px" height="15px">
         </div>
     </div>
-    <div class="row mb-2">
-        <div class="col-md-6">
-            <p class="card-text montserrat m-2"><strong>Cantidad:</strong> </p>
-        </div>
-        <div class="col-md-6">
-            <div class="row">
-                <div class="col-md-4 center" (click)="moreDetails()" type="button">
-                    -
-                </div>
-                <div class="col-md-4">
-                    1
-                </div>
-                <div class="col-md-4 " type="button">
-                    +
-                </div>
-            </div>
-        </div>
-    </div>
+   
+
 
 </div>
 
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-    Launch demo modal
-  </button>
+  Launch demo modal
+</button>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
