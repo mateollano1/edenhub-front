@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import Swal from 'sweetalert2'
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { Product } from '../../../models/product';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -9,9 +10,12 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 export class ProductComponent implements OnInit {
   ej: string = "paula"
   closeResult: string;
+  @Input() product: Product;
   constructor(private modalService: NgbModal) { }
 
   ngOnInit(): void {
+    console.log(this.product['images'][0]['url']);
+    
   }
   saluda() {
     console.log("de");

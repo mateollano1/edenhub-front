@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsService } from '../../services/products.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-products-categories',
@@ -6,10 +8,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products-categories.component.css']
 })
 export class ProductsCategoriesComponent implements OnInit {
+  typeName: string = ""
+  products: any [] = []
+  constructor(
+    private productsService: ProductsService,
+    private route: ActivatedRoute,
+  ) { 
+    this.route.params.subscribe((params => {
+      this.typeName = params.name;
+    }));
 
-  constructor() { }
+  }
 
   ngOnInit(): void {
+    this.getProducts()
+  }
+  getProducts(){
+    this.products = []
+    this.productsService.getProductsByCategory(this.typeName).subscribe((data:any)=>{
+      this.products = data['products']
+    })
   }
 
 }

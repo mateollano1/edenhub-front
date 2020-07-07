@@ -43,6 +43,11 @@
                         <div class="row centerCard mt-4 roboto">
                             <span>Familia Hub:</span>
                         </div>
+                        <div class="row centerCard">
+                            <div *ngFor="let item of companies" class="card" style="width: 1.5em;height: 1.5em; margin-left: 10px;">
+                                <img src="http://localhost:4200/assets/imgs/eden_hub4.png" title="{{item.name}}" alt="ex" width="100%">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

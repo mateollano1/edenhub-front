@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CompaniesService } from '../../services/companies.service';
 
 @Component({
   selector: 'app-presentation-page',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./presentation-page.component.css']
 })
 export class PresentationPageComponent implements OnInit {
-
-  constructor() { }
+  companies: any []
+  constructor(
+    private companiesService: CompaniesService
+  ) { }
 
   ngOnInit(): void {
+    this.getCompaniesPresentation()
+  }
+  getCompaniesPresentation() {
+    this.companiesService.getCompaniesPresentation().subscribe((data: any) => {
+      this.companies = data['companies']
+    })
   }
 
 }

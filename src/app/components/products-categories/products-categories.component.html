@@ -7,12 +7,14 @@
 </div>
 <div class="row" style=" width: 100%;">
     <div class="container-fluid m-3">
-        <div class="row  mt-4 quickSand" style="font-size: 34px;">
-            <p>PRODUCTO: </p>
+        <div class="row  mt-4 ml-3 quickSand" style="font-size: 34px;">
+            <p>Nuestros productos: </p>
         </div>
     </div>
-    <div class="centerCard  container-fluid m-1 mb-5">
-        <app-product></app-product>
+    <div class="container-fluid " style="margin-left: 15px;">
+        <div class="col-md-12" style=" display: flex; flex-direction: row;flex-wrap: wrap; ">
+            <app-product *ngFor="let item of products" [product]="item" style="margin-right: 25px; margin-bottom: 2em;"></app-product>
+        </div>
     </div>
 
 </div>
