@@ -1,7 +1,7 @@
-<div class="background centerCard" style="height: 45%;">
+<div class="background centerCard" [ngStyle]="{'background-image': imageBack}" style="height: 47%;">
     <div class="card centerCard center " style="height: 6em; width: 25em; margin-top: 9em;">
-        <span class="quickSand " style="font-size: 55px; color: #280B0B;">
-    Promociones
+        <span class="quickSand " style="font-size: 55px; color: #280B0B; background-color:#ffffff ;opacity: 0.6;">
+    {{word}}
 </span>
     </div>
 </div>
@@ -12,8 +12,11 @@
         </div>
     </div>
     <div class="container-fluid " style="margin-left: 15px;">
-        <div class="col-md-12" style=" display: flex; flex-direction: row;flex-wrap: wrap; ">
-            <app-product *ngFor="let item of products" [product]="item" style="margin-right: 25px; margin-bottom: 2em;"></app-product>
+        <div style="margin: 0 auto; float: none;">
+
+            <div class="col-md-12" style=" display: flex; flex-direction: row;flex-wrap: wrap; ">
+                <app-product *ngFor="let item of products; let i = index" [index]="i" [product]="item" style="margin-right: 25px; margin-bottom: 2em;"></app-product>
+            </div>
         </div>
     </div>
 

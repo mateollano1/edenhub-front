@@ -7,6 +7,20 @@
     background-size: cover;
 }
 
+.background-categories {
+    background-image: url('assets/imgs/menu-3167860_1280.jpg');
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: cover;
+}
+
+.background-bill {
+    background-image: url('https://cdn.pixabay.com/photo/2014/02/01/18/00/money-256312_960_720.jpg');
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: cover;
+}
+
 .background-wood {
     background-image: url('assets/imgs/wood1.jpg');
     background-repeat: no-repeat;

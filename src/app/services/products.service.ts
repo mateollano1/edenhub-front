@@ -15,4 +15,14 @@ export class ProductsService {
       return data;
     }) );
   }
+  getBillByProducts(products){
+    return this.http.post(`${url}/products/bill`, products).pipe( map( (data: any) => {
+      return data;
+    }) );
+  }
+  postPurchase(purchase){
+    return this.http.post(`${url}/purchase`, purchase).pipe( map( (data: any) => {
+      return data;
+    }) );
+  }
 }

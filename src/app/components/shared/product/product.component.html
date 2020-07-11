@@ -1,6 +1,9 @@
-<div class="card shadow-lg " style="width: 17em; border-radius: 1.25rem!important">
-    <img class="card-img-top" height="160" width="240" style="border-top-left-radius: 1.25rem!important; border-top-right-radius: 1.25rem!important" [src]="product['images'][0]['url']" alt="Card image cap">
-    <!-- <div class="card shadow-lg circle">
+<div>
+
+
+    <div class="card shadow-lg " style="width: 17em; border-radius: 1.25rem!important">
+        <img class="card-img-top" height="160" width="240" style="border-top-left-radius: 1.25rem!important; border-top-right-radius: 1.25rem!important" [src]="product['images'][0]['url']" alt="Card image cap">
+        <!-- <div class="card shadow-lg circle">
         <div class="row">
             <div class="col-md-6 centerCard">
                 <a class="mt-1 ml-3">
@@ -12,110 +15,109 @@
             </div>
         </div>
     </div> -->
-    <h5 class="card-title m-2 center montserrat">{{product.name}}</h5>
-    <div class="row">
-        <div class="col-md-5">
-            <p class="card-text montserrat m-2"><strong>Precio: </strong> </p>
-        </div>
+        <h5 class="card-title m-2 center montserrat">{{product.name}}</h5>
+        <div class="row">
+            <div class="col-md-5">
+                <p class="card-text montserrat m-2"><strong>Precio: </strong> </p>
+            </div>
 
-        <div class="col-md-7">
-            <p class="card-text roboto m-2">${{product.price}} COP </p>
+            <div class="col-md-7">
+                <p class="card-text roboto m-2">${{product.price}} COP </p>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-5 ml-2 mt-2 ">
-            <p class="card-text montserrat "><strong>Cantidad:</strong> </p>
+        <div class="row">
+            <div class="col-md-5 ml-2 mt-2 ">
+                <p class="card-text montserrat "><strong>Cantidad:</strong> </p>
+            </div>
+            <div class="col-2 ml-2 mt-2">
+                <img type="button" (click)="plus()" src="../../../../assets/imgs/mas.png" width="15px" height="15px">
+            </div>
+            <div class="col-2 mt-2 ">
+                {{cantidad}}
+            </div>
+            <div class="col-2 mt-2 ">
+                <img type="button" (click)="minus()" src="../../../../assets/imgs/menos.png" width="15px" height="15px">
+            </div>
         </div>
-        <div class="col-2 ml-2 mt-2">
-            <img src="../../../../assets/imgs/mas.png" width="15px" height="15px">
-        </div>
-        <div class="col-2 mt-2 ">
-            1
-        </div>
-        <div class="col-2 mt-2 ">
-            <img src="../../../../assets/imgs/menos.png" width="15px" height="15px">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12  mt-4 mb-4 center">
-            <!-- <img src="../../../../assets/imgs/carroCom.png" width="40px" alt=""> -->
-            <button class="btn " data-toggle="modal" data-target="#exampleModalCenter" style="background: #FF6600; color: white; font-size: 13px; ">
+        <div class="row">
+            <div class="col-md-12  mt-4 mb-4 center">
+                <!-- <img src="../../../../assets/imgs/carroCom.png" width="40px" alt=""> -->
+                <button class="btn " data-toggle="modal" [attr.data-target]="'#test' + index" style="background: #FF6600; color: white; font-size: 13px; ">
                 Ver Más
             </button>
-            <button class="btn ml-2" data-toggle="modal" data-target="#exampleModalCenter" style="background: #008000; color: white;font-size: 13px;">
+                <button class="btn ml-2" (click)="saveInCart()" style="background: #008000; color: white;font-size: 13px;">
                 <span class="buy-icon material-icons " style="font-size: 13px;">shopping_cart</span> Agregar carrito
     </button>
 
 
-        </div>
-        <!-- <div class="col-md-6 mt-4 mb-4">
+            </div>
+            <!-- <div class="col-md-6 mt-4 mb-4">
         </div> -->
+        </div>
+
     </div>
 
-</div>
+
+    <!-- Button trigger modal -->
 
 
-<!-- Button trigger modal -->
-
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content" style="width: 85em; height: 30em;">
-            <div class="modal-header">
-                <h5 class="modal-title montserrat" id="exampleModalLongTitle">{{product.name}}</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <!-- Modal -->
+    <div class="modal fade" id="test{{index}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content" style="width: 85em; height: 30em;">
+                <div class="modal-header">
+                    <h5 class="modal-title montserrat" id="exampleModalLongTitle">{{product.name}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <!-- <button class="btn btn-danger">Quiero Sumarme</button> -->
-                            <img class="product " src="../../../../assets/imgs/ham.jpg">
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <img class="product " src="../../../../assets/imgs/ham.jpg">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="card-text montserrat ml-4"><strong>Precio: </strong> </p>
-                        <p class="card-text roboto ml-4">$18.000 COP </p>
+                        <div class="col-md-6">
+                            <p class="card-text montserrat ml-4"><strong>Precio: </strong> </p>
+                            <p class="card-text roboto ml-4">{{product.name}} </p>
 
-                        <div class="row ml-2">
-                            <div class="col-md-6">
-                                <p class="card-text montserrat"><strong>Cantidad:</strong> </p>
+                            <div class="row ml-2">
+                                <div class="col-md-6">
+                                    <p class="card-text montserrat"><strong>Cantidad:</strong> </p>
 
-                                <div class="row">
-                                    <div class="col-3 center" type="button">
-                                        <img src="../../../../assets/imgs/mas.png" width="15px" height="15px">
-                                    </div>
-                                    <div class="col-3 center">
-                                        1
-                                    </div>
-                                    <div class="col-3 center " type="button">
-                                        <img src="../../../../assets/imgs/menos.png" width="15px" height="15px">
+                                    <div class="row">
+                                        <div class="col-3 center" type="button">
+                                            <img src="../../../../assets/imgs/mas.png" width="15px" height="15px">
+                                        </div>
+                                        <div class="col-3 center">
+                                            1
+                                        </div>
+                                        <div class="col-3 center " type="button">
+                                            <img src="../../../../assets/imgs/menos.png" width="15px" height="15px">
+                                        </div>
                                     </div>
                                 </div>
+
                             </div>
 
+
                         </div>
-
-                        <!-- <button class="btn btn-danger">Ubicanos</button> -->
-
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10 mt-2 ml-2">
+                            <p class="montserrat"><strong>Descripción: </strong></p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic voluptatum, sunt ratione aspernatur saepe libero non obcaecati, ullam, magni doloribus perspiciatis perferendis iusto. Veniam facere aliquam aperiam debitis temporibus
+                                sint?
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-10 mt-2 ml-2">
-                        <p class="montserrat"><strong>Descripción: </strong></p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic voluptatum, sunt ratione aspernatur saepe libero non obcaecati, ullam, magni doloribus perspiciatis perferendis iusto. Veniam facere aliquam aperiam debitis temporibus
-                            sint?
-                        </p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
             </div>
         </div>
     </div>
