@@ -76,7 +76,9 @@ export class FinishBuyComponent implements OnInit {
             title: 'Compra finalizada exitosamente',
             text: '¡Gracias por tu compra!',
             icon: 'success',
-            confirmButtonText: 'Ok'
+            confirmButtonText: 'Ok',
+            confirmButtonColor: '#008000'
+            
           })
 
         })
@@ -87,7 +89,8 @@ export class FinishBuyComponent implements OnInit {
           title: 'Formulario invalido',
           text: 'Por favor ingrese correctamente los datos',
           icon: 'error',
-          confirmButtonText: 'Cool'
+          confirmButtonText: 'Ok',
+          confirmButtonColor: '#008000',
         })
       }
     }
@@ -96,7 +99,8 @@ export class FinishBuyComponent implements OnInit {
         title: 'Error!',
         text: 'Do you want to continue',
         icon: 'error',
-        confirmButtonText: 'Cool'
+        confirmButtonText: 'Ok',
+        confirmButtonColor: '#008000',
       })
     }
   }
