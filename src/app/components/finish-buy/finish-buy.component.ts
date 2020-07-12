@@ -73,10 +73,10 @@ export class FinishBuyComponent implements OnInit {
         this.productsService.postPurchase(purchase).subscribe(data =>{
           console.log(data);
           Swal.fire({
-            title: 'Error!',
-            text: 'Do you want to continue',
-            icon: 'error',
-            confirmButtonText: 'Cool'
+            title: 'Compra finalizada exitosamente',
+            text: '¡Gracias por tu compra!',
+            icon: 'success',
+            confirmButtonText: 'Ok'
           })
 
         })
@@ -84,8 +84,8 @@ export class FinishBuyComponent implements OnInit {
       }else{
         console.log("invalid");
         Swal.fire({
-          title: 'Error!',
-          text: 'Do you want to continue',
+          title: 'Formulario invalido',
+          text: 'Por favor ingrese correctamente los datos',
           icon: 'error',
           confirmButtonText: 'Cool'
         })

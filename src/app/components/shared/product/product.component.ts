@@ -28,6 +28,7 @@ export class ProductComponent implements OnInit {
     }
     else {
       cartProducts.push(idProduct)
+      this.message(this.product.name)
     }
     localStorage.setItem("products", JSON.stringify(cartProducts))
   }
@@ -39,5 +40,19 @@ export class ProductComponent implements OnInit {
       this.cantidad = this.cantidad - 1
     }
   }
+
+  message(nombre:string){
+    Swal.fire({
+      icon: 'success',
+      title: 'Se agregó al carrito',
+      text: nombre,
+      confirmButtonColor: '#008000',
+      // imageUrl: this.product['images'][0]['url'],
+      // imageWidth: 200,
+      // imageHeight: 200,
+      
+    })
+  }
+  
 
 }
