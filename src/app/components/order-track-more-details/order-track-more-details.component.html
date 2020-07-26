@@ -1,0 +1,39 @@
+<p>order-track-more-details works!</p>
+<div class="m-5">
+    <h5 class="montserrat mb-3">Información de Venta</h5>
+    <div class="card mt-2">
+        <div class="card-body">
+            <div class="col-md-6">
+                <span>Nombre:  {{order['name']}}</span><br>
+                <span>Dirección:  {{order['location']}}</span><br>
+                <span>Teléfono:  {{order['telephone']}}</span><br>
+                <span>Precio Final: {{order['totalPrice']}} </span><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-5">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Orden</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Cantidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of order['products']; let i = index">
+                    <td>{{item['idProduct']['name']}}</td>
+                    <td>{{item['idProduct']['price']}}</td>
+                    <td>{{item['ammount']}}</td>
+                    <!-- <td>{{item['location']}}</td>
+                    <td><button (click)="more(i)" class="btn btn-secondary">
+                        Ver Más
+                    </button></td> -->
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</div>

@@ -21,6 +21,8 @@ import { ProductsCategoriesComponent } from './components/products-categories/pr
 import { FinishBuyComponent } from './components/finish-buy/finish-buy.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoadingComponent } from './components/shared/loading/loading.component';
+import { OrderTrackComponent } from './components/order-track/order-track.component';
+import { OrderTrackMoreDetailsComponent } from './components/order-track-more-details/order-track-more-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,9 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     ProductComponent,
     ProductsCategoriesComponent,
     FinishBuyComponent,
-    LoadingComponent
+    LoadingComponent,
+    OrderTrackComponent,
+    OrderTrackMoreDetailsComponent
   ],
   imports: [
     BrowserModule,

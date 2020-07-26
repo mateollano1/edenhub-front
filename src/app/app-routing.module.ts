@@ -6,6 +6,8 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { SearchPageComponent } from './components/search-page/search-page.component';
 import { ProductsCategoriesComponent } from './components/products-categories/products-categories.component';
 import { FinishBuyComponent } from './components/finish-buy/finish-buy.component';
+import { OrderTrackComponent } from './components/order-track/order-track.component';
+import { OrderTrackMoreDetailsComponent } from './components/order-track-more-details/order-track-more-details.component';
 
 
 const routes: Routes = [
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path: 'search', component: SearchPageComponent },
   { path: 'categorias/:name', component: ProductsCategoriesComponent },
   { path: 'factura', component: FinishBuyComponent },
+  { path: 'order/track', component: OrderTrackComponent },
+  { path: 'order/track/:id', component: OrderTrackMoreDetailsComponent },
   { path: '', redirectTo: '', pathMatch: 'full' },
   // { path: '**', component: PresentationPageComponent },
 ];
