@@ -8,6 +8,7 @@ import { CompaniesService } from '../../services/companies.service';
 })
 export class PresentationPageComponent implements OnInit {
   companies: any []
+  loading: boolean = true
   constructor(
     private companiesService: CompaniesService
   ) { }
@@ -18,6 +19,7 @@ export class PresentationPageComponent implements OnInit {
   getCompaniesPresentation() {
     this.companiesService.getCompaniesPresentation().subscribe((data: any) => {
       this.companies = data['companies']
+      this.loading = false
     })
   }
 

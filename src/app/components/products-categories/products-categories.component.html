@@ -1,11 +1,12 @@
-<div class="background centerCard" [ngStyle]="{'background-image': imageBack}" style="height: 47%;">
+<app-loading *ngIf="loading"></app-loading>
+<div class="background centerCard" [ngStyle]="{'background-image': imageBack}" style="height: 47%;" *ngIf="!loading">
     <div class="card centerCard center " style="height: 6em; width: 25em; margin-top: 9em;">
         <span class="quickSand " style="font-size: 55px; color: #280B0B; background-color:#ffffff ;opacity: 0.6;">
     {{word}}
 </span>
     </div>
 </div>
-<div class="row" style=" width: 100%;">
+<div class="row" style=" width: 100%;" *ngIf="!loading">
     <div class="container-fluid m-3">
         <div class="row  mt-4 ml-3 quickSand" style="font-size: 34px;">
             <p>Nuestros productos: </p>

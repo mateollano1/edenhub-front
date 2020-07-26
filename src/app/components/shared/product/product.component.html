@@ -2,7 +2,7 @@
 
 
     <div class="card shadow-lg " style="width: 17em; border-radius: 1.25rem!important">
-        <img class="card-img-top" height="160" width="240" style="border-top-left-radius: 1.25rem!important; border-top-right-radius: 1.25rem!important" [src]="product['images'][0]['url']" alt="Card image cap">
+        <img class="card-img-top" data-toggle="modal" [attr.data-target]="'#test' + index" height="160" width="240" style="border-top-left-radius: 1.25rem!important; border-top-right-radius: 1.25rem!important" [src]="product['images'][0]['url']" alt="Card image cap">
         <!-- <div class="card shadow-lg circle">
         <div class="row">
             <div class="col-md-6 centerCard">
@@ -75,7 +75,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="card">
-                                <img class="product "  [src]="product['images'][0]['url']">
+                                <img class="product " [src]="product['images'][0]['url']">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -88,34 +88,34 @@
 
                                     <div class="row">
                                         <div class="col-3 center" type="button">
-                                            <img src="../../../../assets/imgs/mas.png"  type="button" (click)="plus()" width="15px" height="15px">
+                                            <img src="../../../../assets/imgs/mas.png" type="button" (click)="plus()" width="15px" height="15px">
                                         </div>
                                         <div class="col-3 center">
                                             {{cantidad}}
                                         </div>
                                         <div class="col-3 center " type="button">
-                                            <img src="../../../../assets/imgs/menos.png"  type="button" (click)="minus()" width="15px" height="15px">
+                                            <img src="../../../../assets/imgs/menos.png" type="button" (click)="minus()" width="15px" height="15px">
                                         </div>
                                     </div>
                                 </div>
-                    
+
                             </div>
                             <div class="row mt-4">
-                                <div class="col-md-12  mt-4 mb-4 " >
+                                <div class="col-md-12  mt-4 mb-4 ">
                                     <button class="btn ml-4" (click)="saveInCart()" style="background: #008000; color: white;font-size: 13px;">
                                         <span class="buy-icon material-icons " style="font-size: 13px;">shopping_cart</span> Agregar carrito
-                                    </button> 
+                                    </button>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
 
                     <div class="row ">
-                        <div class="col-md-12 mt-2 center" style="padding: 20px;" >
+                        <div class="col-md-12 mt-2 center" style="padding: 20px;">
                             <p class="montserrat"><strong>Descripción: </strong></p>
                             <!-- <p style="text-align: justify;" class="center"> -->
-                                <p  class="center">
+                            <p class="center">
                                 {{product.description}}
                             </p>
                         </div>

@@ -20,6 +20,7 @@ import { ProductComponent } from './components/shared/product/product.component'
 import { ProductsCategoriesComponent } from './components/products-categories/products-categories.component';
 import { FinishBuyComponent } from './components/finish-buy/finish-buy.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LoadingComponent } from './components/shared/loading/loading.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SearchPageComponent,
     ProductComponent,
     ProductsCategoriesComponent,
-    FinishBuyComponent
+    FinishBuyComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

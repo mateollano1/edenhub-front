@@ -12,6 +12,7 @@ export class ProductsCategoriesComponent implements OnInit {
   products: any [] = []
   word: string = ""
   imageBack = ""
+  loading: boolean = true
   constructor(
     private productsService: ProductsService,
     private route: ActivatedRoute,
@@ -31,6 +32,7 @@ export class ProductsCategoriesComponent implements OnInit {
     this.productsService.getProductsByCategory(this.typeName).subscribe((data:any)=>{
       this.products = data['products']
       this.imageBack = `url('${data['image']}')`
+      this.loading = false
     })
   }
 
