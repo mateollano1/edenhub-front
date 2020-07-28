@@ -15,10 +15,10 @@
             </div>
         </div>
     </div> -->
-        <h5 class="card-title m-2 center montserrat">{{product.name}}</h5>
+        <h5 class="card-title m-2 center montserrat ">{{product.name}}</h5>
         <div class="row">
             <div class="col-md-5">
-                <p class="card-text montserrat m-2"><strong>Precio: </strong> </p>
+                <p class="card-text montserrat m-2  "><strong>Precio: </strong> </p>
             </div>
 
             <div class="col-md-7">
@@ -64,7 +64,7 @@
     <!-- Modal -->
     <div class="modal fade" id="test{{index}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content" style="width: 85em; height: 30em;">
+            <div class="modal-content" style="width: 80em; height: 30em;">
                 <div class="modal-header">
                     <h5 class="modal-title montserrat" id="exampleModalLongTitle">{{product.name}}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -79,7 +79,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <p class="card-text montserrat ml-4"><strong>Precio: </strong> </p>
+                            <p class="card-text montserrat ml-4 celuPrice"><strong>Precio: </strong> </p>
                             <p class="card-text roboto ml-4">{{product.price}} </p>
 
                             <div class="row ml-2">
@@ -101,23 +101,20 @@
 
                             </div>
                             <div class="row mt-4">
-                                <div class="col-md-12  mt-4 mb-4 ">
-                                    <button class="btn ml-4" (click)="saveInCart()" style="background: #008000; color: white;font-size: 13px;">
-                                        <span class="buy-icon material-icons " style="font-size: 13px;">shopping_cart</span> Agregar carrito
-                                    </button>
+                                <div class="col-md-11 celDescription ">
+                                    <p class="montserrat "><strong>Descripción: </strong></p>
+                                    <!-- <p style="text-align: justify;" class="center"> -->
+                                    <p class="">
+                                        {{product.description}}
+                                    </p>
                                 </div>
+
                             </div>
-
-                        </div>
-                    </div>
-
-                    <div class="row ">
-                        <div class="col-md-12 mt-2 center" style="padding: 20px;">
-                            <p class="montserrat"><strong>Descripción: </strong></p>
-                            <!-- <p style="text-align: justify;" class="center"> -->
-                            <p class="center">
-                                {{product.description}}
-                            </p>
+                            <div class="col-md-12 mt-4 mb-4 buttonCelu ">
+                                <button class="btn" (click)="saveInCart()" style="background: #008000; color: white;font-size: 13px;">
+                                    <span class="buy-icon material-icons " style="font-size: 13px;">shopping_cart</span> Agregar carrito
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -125,3 +122,5 @@
         </div>
     </div>
 </div>
+
+

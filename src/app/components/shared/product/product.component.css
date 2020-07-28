@@ -23,3 +23,27 @@
     width: 100%;
     overflow-y: auto;
 }
+
+@media only screen and (max-width: 622px) {
+    .celuPrice { 
+        margin-top: 6px;
+    }
+    .celDescription{
+        text-align: center;    
+        margin-top: 2px;
+     }
+     .buttonCelu{
+        text-align: center;
+     }
+}
+
+@media only screen and (min-width: 623px) {
+    .celDescription{
+        margin-top: 2px;  
+        margin-left: 20px;
+     }
+     .buttonCelu{
+        margin-left: 2px;
+     }
+
+}
