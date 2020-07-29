@@ -1,16 +1,23 @@
 <div class="background centerCard" style="height: 45%;">
     <div style="height: 6em; width: 25em; margin-top: 9em;">
         <div class="container shadow-lg mt-4" style="background-color: white; border-radius: 0.75rem!important">
-            <input placeholder='Busca Tu producto' class='js-search shadow-lg' type="text">
-            <i class="fa fa-search" type="button" style="font-size: 22px;"></i>
+            <input placeholder='Busca Tu producto' (keyup.enter)="search(word.value)" class='js-search shadow-lg' type="text" #word>
+            <i class="fa fa-search" type="button" (click)="search(word.value)" style="font-size: 22px;"></i>
         </div>
     </div>
 </div>
-<div class="container-fluid m-3">
+<div class="container-fluid m-3 mt-5 mb-5">
     <div class="row centerCard mt-4 quickSand" style="font-size: 24px;">
-        <p>Resultados de Búsqueda para la palabra ejemplo: </p>
+        <p>Resultados de Búsqueda para la palabra {{word}}: </p>
     </div>
 </div>
-<div class="centerCard  container-fluid m-1 mb-5">
-    <app-product></app-product>
+<div class="row" style=" width: 100%;">
+    <div class="container-fluid " style="margin-left: 15px;">
+        <div style="margin: 0 auto; float: none;">
+
+            <div class="col-md-12" style=" display: flex; flex-direction: row;flex-wrap: wrap; ">
+                <app-product *ngFor="let item of products; let i = index" [index]="i" [product]="item" style="margin-right: 25px; margin-bottom: 2em;"></app-product>
+            </div>
+        </div>
+    </div>
 </div>

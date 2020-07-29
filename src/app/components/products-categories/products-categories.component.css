@@ -1,0 +1,32 @@
+@media (min-width: 1200px) {
+    .title-product {
+        height: 6em;
+        width: 35%;
+        margin-top: 9em;
+    }
+    .size-title {
+        font-size: 55px;
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 600px) {
+    .title-product {
+        height: 6em;
+        width: 55%;
+        margin-top: 9em;
+    }
+    .size-title {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 600px) {
+    .title-product {
+        height: 6em;
+        width: 70%;
+        margin-top: 9em;
+    }
+    .size-title {
+        font-size: 30px;
+    }
+}

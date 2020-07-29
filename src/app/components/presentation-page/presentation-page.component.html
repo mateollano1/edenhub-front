@@ -11,11 +11,11 @@
                     <div class="card-body montserrat " style="margin-top: 9em;">
                         <div class="row">
                             <div class="col-md-12 centerCard quickSand">
-                                <h5>Mensaje que incluya algo del oriente antioqueño</h5>
+                                <h5>El repositorio de locales del Oriente Antioqueño</h5>
                             </div>
-                            <div class="container mt-4">
-                                <input placeholder='Busca Tu producto' class='js-search' type="text">
-                                <i class="fa fa-search" type="button" style="font-size: 22px;"></i>
+                            <div class="container mt-4 montserrat">
+                                <input placeholder='Busca Tu producto' (keyup.enter)="search(word.value)" class='js-search' type="text" #word>
+                                <i class="fa fa-search" (click)="search(word.value)" type="button" style="font-size: 22px;"></i>
                             </div>
                         </div>
                         <div class="row quickSand centerCard mt-4" style="font-size: 20px;">

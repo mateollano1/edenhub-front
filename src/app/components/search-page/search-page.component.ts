@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-search-page',
@@ -6,10 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-page.component.css']
 })
 export class SearchPageComponent implements OnInit {
-
-  constructor() { }
+  word: string = ""
+  products: any []
+  constructor(private route: ActivatedRoute,
+              private router: Router,
+              private productsService: ProductsService) { 
+    this.route.queryParams.subscribe(params => {
+      this.word = params['q'];
+      productsService.getProductsBySearch(this.word).subscribe(data =>{
+        this.products = data['products']
+      })
+  });
+  }
 
   ngOnInit(): void {
   }
-
+  search(word){
+    this.router.navigateByUrl(`search?q=${word}`)
+  }
 }
