@@ -10,7 +10,9 @@ import { Router } from '@angular/router';
 export class OrderTrackComponent implements OnInit {
   orders = []
   constructor(private orderService: OrderService,
-    private router: Router) { }
+    private router: Router) { 
+      window.scroll(0,0);
+    }
 
   ngOnInit(): void {
     this.orderService.getPurchases().subscribe((data: any) => {

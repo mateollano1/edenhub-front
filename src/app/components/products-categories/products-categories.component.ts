@@ -19,6 +19,7 @@ export class ProductsCategoriesComponent implements OnInit {
   ) { 
     this.route.params.subscribe((params => {
       this.typeName = params.name;
+      window.scroll(0,0);
       this.word = this.typeName.charAt(0).toUpperCase() + this.typeName.slice(1)
     }));
 

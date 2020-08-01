@@ -13,7 +13,9 @@ export class PresentationPageComponent implements OnInit {
   constructor(
     private companiesService: CompaniesService,
     private router: Router
-  ) { }
+  ) { 
+    window.scroll(0,0);
+  }
 
   ngOnInit(): void {
     this.getCompaniesPresentation()

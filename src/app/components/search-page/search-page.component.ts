@@ -17,6 +17,7 @@ export class SearchPageComponent implements OnInit {
       this.word = params['q'];
       productsService.getProductsBySearch(this.word).subscribe(data =>{
         this.products = data['products']
+        window.scroll(0,0);
       })
   });
   }

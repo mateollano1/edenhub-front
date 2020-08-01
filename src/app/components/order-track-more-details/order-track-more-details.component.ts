@@ -14,6 +14,7 @@ export class OrderTrackMoreDetailsComponent implements OnInit {
               private route: ActivatedRoute) { 
     this.route.params.subscribe((params => {
       this.orderId = params.id;
+      window.scroll(0,0);
     }));
   }
 

@@ -11,7 +11,9 @@ export class FinishBuyComponent implements OnInit {
   products: any[]
   finalPrice: ""
   public bill: FormGroup
-  constructor(private productsService:ProductsService) { }
+  constructor(private productsService:ProductsService) {
+    window.scroll(0,0);
+   }
 
   ngOnInit(): void {
     this.getProducts()
