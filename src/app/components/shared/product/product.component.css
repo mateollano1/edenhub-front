@@ -1,4 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@media (max-width: 600px) {
+    .producter {
+        width: 18em!important;
+        border-radius: 1.25rem!important;
+        margin-left: 1.5em;
+    }
+}
+
+.producter {
+    width: 17em;
+    border-radius: 1.25rem!important;
+}
+
 .circle {
     position: absolute;
     height: 35px;
@@ -25,25 +38,24 @@
 }
 
 @media only screen and (max-width: 622px) {
-    .celuPrice { 
-        margin-top: 6px;
+    .celuPrice {
+        margin-top: 2em;
     }
-    .celDescription{
-        text-align: center;    
+    .celDescription {
+        /* text-align: center; */
         margin-top: 2px;
-     }
-     .buttonCelu{
+    }
+    .buttonCelu {
         text-align: center;
-     }
+    }
 }
 
 @media only screen and (min-width: 623px) {
-    .celDescription{
-        margin-top: 2px;  
+    .celDescription {
+        margin-top: 2px;
         margin-left: 20px;
-     }
-     .buttonCelu{
+    }
+    .buttonCelu {
         margin-left: 2px;
-     }
-
+    }
 }

@@ -12,12 +12,9 @@
             <p>Nuestros productos: </p>
         </div>
     </div>
-    <div class="container-fluid " style="margin-left: 15px;">
-        <div style="margin: 0 auto; float: none;">
-
-            <div class="col-md-12" style=" display: flex; flex-direction: row;flex-wrap: wrap; ">
-                <app-product *ngFor="let item of products; let i = index" [index]="i" [product]="item" style="margin-right: 25px; margin-bottom: 2em;"></app-product>
-            </div>
+    <div class="container-fluid ">
+        <div class="col-md-12 contain-item">
+            <app-product class="item" *ngFor="let item of products; let i = index" [index]="i" [product]="item"></app-product>
         </div>
     </div>
 

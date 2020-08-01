@@ -7,6 +7,10 @@
     .size-title {
         font-size: 55px;
     }
+    .item {
+        margin-right: 25px;
+        margin-bottom: 2em;
+    }
 }
 
 @media (max-width: 1200px) and (min-width: 600px) {
@@ -17,6 +21,10 @@
     }
     .size-title {
         font-size: 45px;
+    }
+    .item {
+        margin-right: 25px;
+        margin-bottom: 2em;
     }
 }
 
@@ -29,4 +37,17 @@
     .size-title {
         font-size: 30px;
     }
+    .item {
+        /* margin-right: 25px; */
+        margin-bottom: 2em;
+    }
+}
+
+.contain-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: flex-start;
 }
