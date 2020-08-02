@@ -29,6 +29,8 @@ export class PresentationPageComponent implements OnInit {
     this.companiesService.getCompaniesPresentation().subscribe((data: any) => {
       this.companies = data['companies']
       this.loading = false
+      console.log(this.companies);
+      
     })
   }
 
