@@ -56,7 +56,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="company'+i " tabindex="1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div *ngFor="let item of companies; let i = index" class="modal fade" id="company{{i}}" tabindex="1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content" style="width: 80em; height: 30em;">
             <div class="modal-header">
