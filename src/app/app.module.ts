@@ -23,6 +23,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { OrderTrackComponent } from './components/order-track/order-track.component';
 import { OrderTrackMoreDetailsComponent } from './components/order-track-more-details/order-track-more-details.component';
+
+//Pipes
+import { PricePipe } from './pipes/price.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +40,8 @@ import { OrderTrackMoreDetailsComponent } from './components/order-track-more-de
     FinishBuyComponent,
     LoadingComponent,
     OrderTrackComponent,
-    OrderTrackMoreDetailsComponent
+    OrderTrackMoreDetailsComponent,
+    PricePipe
   ],
   imports: [
     BrowserModule,
