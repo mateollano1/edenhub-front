@@ -9,16 +9,13 @@ export class PricePipe implements PipeTransform {
     let newPrice: string = "";
     let cadenaNueva="" ;
     let cont=0
-    for (var i = price.length - 1; i >= 0; i--) {
-        
+    for (var i = price.length - 1; i >= 0; i--) {   
       if(cont==4){
         newPrice+= price.charAt(i);
         newPrice+= price.charAt(Number(','))
       }else{
         newPrice+= price.charAt(i);
       }
-    
-      console.log(newPrice)
     }
     cont+=1
 
