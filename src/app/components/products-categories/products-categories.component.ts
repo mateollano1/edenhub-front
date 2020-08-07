@@ -9,28 +9,26 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductsCategoriesComponent implements OnInit {
   typeName: string = ""
-  products: any [] = []
+  products: any[] = []
   word: string = ""
   imageBack = ""
   loading: boolean = true
   constructor(
     private productsService: ProductsService,
     private route: ActivatedRoute,
-  ) { 
-    this.route.params.subscribe((params => {
-      this.typeName = params.name;
-      window.scroll(0,0);
-      this.word = this.typeName.charAt(0).toUpperCase() + this.typeName.slice(1)
-    }));
-
-  }
+  ) {}
 
   ngOnInit(): void {
-    this.getProducts()
+    this.route.params.subscribe((params => {
+      this.typeName = params.name;
+      window.scroll(0, 0);
+      this.word = this.typeName.charAt(0).toUpperCase() + this.typeName.slice(1)
+      this.getProducts()
+    }));
   }
-  getProducts(){
+  getProducts() {
     this.products = []
-    this.productsService.getProductsByCategory(this.typeName).subscribe((data:any)=>{
+    this.productsService.getProductsByCategory(this.typeName).subscribe((data: any) => {
       this.products = data['products']
       this.imageBack = `url('${data['image']}')`
       this.loading = false

@@ -11,15 +11,15 @@ export class FinishBuyComponent implements OnInit {
   products: any[]
   finalPrice: ""
   public bill: FormGroup
-  constructor(private productsService:ProductsService) {
-    window.scroll(0,0);
-   }
+  constructor(private productsService: ProductsService) {
+    window.scroll(0, 0);
+  }
 
   ngOnInit(): void {
     this.getProducts()
     this.createBillForm()
   }
-  createBillForm(){
+  createBillForm() {
     this.bill = new FormGroup({
       'name': new FormControl('', Validators.required),
       'location': new FormControl('', Validators.required),
@@ -27,66 +27,66 @@ export class FinishBuyComponent implements OnInit {
       'note': new FormControl(''),
     })
   }
-  getProducts(){
-    let cartProducts = JSON.parse(localStorage.getItem("products"));
+  getProducts() {
+    let cartProducts = JSON.parse(sessionStorage.getItem("products"));
     if (cartProducts !== null) {
-      this.productsService.getBillByProducts(cartProducts).subscribe(data =>{
-        console.log(data);
+      this.productsService.getBillByProducts(cartProducts).subscribe(data => {
+        // console.log(data);
         this.products = data['bill']
         this.finalPrice = data['finalPrice']
       })
     }
   }
-  deleteProduct(i){
-    let cartProducts = JSON.parse(localStorage.getItem("products"));
+  deleteProduct(i) {
+    let cartProducts = JSON.parse(sessionStorage.getItem("products"));
     let prod = this.products[i]['product']['_id'] + " X" + this.products[i]['ammount']
     for (let index = 0; index < cartProducts.length; index++) {
       const element = cartProducts[index];
       if (element == prod) {
-        cartProducts.splice(i,1)
-        localStorage.setItem("products", JSON.stringify(cartProducts))
+        cartProducts.splice(i, 1)
+        sessionStorage.setItem("products", JSON.stringify(cartProducts))
         index = cartProducts.length
       }
-      
+
     }
     this.getProducts()
   }
 
-  savePurchase(){
+  savePurchase() {
     if (this.products.length > 0) {
       if (this.bill.valid) {
         let newFormatProduct = []
         for (let index = 0; index < this.products.length; index++) {
           const element = this.products[index];
-          let prod ={
+          let prod = {
             'ammount': element['ammount'],
             'idProduct': element['product']['_id'],
           }
           newFormatProduct.push(prod)
         }
-       let  purchase = {
-         'name':this.bill.value['name'],
-         'location':this.bill.value['location'],
-         'telephone':this.bill.value['telephone'],
-         'note':this.bill.value['note'],
-         'totalPrice':this.finalPrice,
-         'products': newFormatProduct
+        let purchase = {
+          'name': this.bill.value['name'],
+          'location': this.bill.value['location'],
+          'telephone': this.bill.value['telephone'],
+          'note': this.bill.value['note'],
+          'totalPrice': this.finalPrice,
+          'products': newFormatProduct
         }
-        this.productsService.postPurchase(purchase).subscribe(data =>{
-          console.log(data);
+        this.productsService.postPurchase(purchase).subscribe(data => {
+          sessionStorage.clear()
           Swal.fire({
             title: 'Compra finalizada exitosamente',
             text: '¡Gracias por tu compra!',
             icon: 'success',
             confirmButtonText: 'Ok',
             confirmButtonColor: '#008000'
-            
+
           })
 
         })
-        
-      }else{
-        console.log("invalid");
+
+      } else {
+        // console.log("invalid");
         Swal.fire({
           title: 'Formulario invalido',
           text: 'Por favor ingrese correctamente los datos',
@@ -96,7 +96,7 @@ export class FinishBuyComponent implements OnInit {
         })
       }
     }
-    else{
+    else {
       Swal.fire({
         title: 'Error!',
         text: 'Do you want to continue',

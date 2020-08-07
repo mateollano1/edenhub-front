@@ -17,8 +17,7 @@ export class OrderTrackComponent implements OnInit {
   ngOnInit(): void {
     this.orderService.getPurchases().subscribe((data: any) => {
       this.orders = data['order']
-      console.log(this.orders);
-
+      // console.log(this.orders);
     }
     )
   }

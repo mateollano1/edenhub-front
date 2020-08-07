@@ -8,22 +8,21 @@ import { Router } from '@angular/router';
   styleUrls: ['./presentation-page.component.css']
 })
 export class PresentationPageComponent implements OnInit {
-  companies: any []
+  companies: any[]
   loading: boolean = true
   constructor(
     private companiesService: CompaniesService,
     private router: Router
-  ) { 
-    window.scroll(0,0);
+  ) {
+    window.scroll(0, 0);
   }
 
   ngOnInit(): void {
     this.getCompaniesPresentation()
   }
-  search(word){
-    console.log(word);
+  search(word) {
+    // console.log(word);
     this.router.navigateByUrl(`search?q=${word}`)
-    
   }
   getCompaniesPresentation() {
     this.companiesService.getCompaniesPresentation().subscribe((data: any) => {

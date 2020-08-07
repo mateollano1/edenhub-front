@@ -22,16 +22,16 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
   }
   saveInCart() {
-    console.log(this.product['_id']);
+    // console.log(this.product['_id']);
     let idProduct = this.product['_id'] + " X" + this.cantidad
-    let cartProducts = JSON.parse(localStorage.getItem("products"));
+    let cartProducts = JSON.parse(sessionStorage.getItem("products"));
     if (cartProducts == null) {
       cartProducts = [idProduct]
     }
     else {
       cartProducts.push(idProduct)
     }
-    localStorage.setItem("products", JSON.stringify(cartProducts))
+    sessionStorage.setItem("products", JSON.stringify(cartProducts))
     this.message(this.product.name)
   }
   plus() {

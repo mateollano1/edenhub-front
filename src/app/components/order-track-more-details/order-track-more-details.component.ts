@@ -9,21 +9,19 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class OrderTrackMoreDetailsComponent implements OnInit {
   order = ""
-  orderId: string =""
+  orderId: string = ""
   constructor(private orderService: OrderService,
-              private route: ActivatedRoute) { 
+    private route: ActivatedRoute) {
     this.route.params.subscribe((params => {
       this.orderId = params.id;
-      window.scroll(0,0);
+      window.scroll(0, 0);
     }));
   }
 
   ngOnInit(): void {
     this.orderService.getPurchaseById(this.orderId).subscribe((data: any) => {
-    
       this.order = (data['order'])
-      console.log(this.order);
-        
+      // console.log(this.order);
     })
   }
 
