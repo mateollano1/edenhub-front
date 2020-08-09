@@ -19,18 +19,11 @@
         <div class="">
             <div class="col-md-11 mt-1">
                 <span class="card-text montserrat m-2  "><strong>Precio: </strong> </span>
-                <span class="card-text roboto m-2">${{product.price}} COP </span>
+                <span class="card-text roboto m-2">{{product.price | price }} </span>
             </div>
-
-            <!-- <div class="col-md-7">
-                <span class="card-text roboto m-2">${{product.price}} COP </span>
-            </div> -->
         </div>
         <div class="col-md-5 ml-2 mt-2 ">
             <p class="card-text montserrat "><strong>Unidades:</strong> </p>
-            <div class="col-md-7">
-                <p class="card-text roboto m-2">{{product.price | price }}</p>
-            </div>
         </div>
         <div class="row centerCard">
             <!-- <div class="col-2 ml-2 mt-2">

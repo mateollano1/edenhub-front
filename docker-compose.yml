@@ -1,0 +1,28 @@
+version: "3"
+services:
+  eden-image:
+    image: eden-front
+    build:
+      context: .
+    expose:
+      - "80"
+        # depends_on:
+        #     - node
+        # networks:
+        #     - backend
+        #     - proxy
+        # environment:
+        #   - VIRTUAL_HOST=demo.charliebot.ai
+        #   - LETSENCRYPT_HOST=demo.charliebot.ai
+        #   - LETSENCRYPT_EMAIL=edenhubrionegro@gmail.com
+        # deploy:
+        #     replicas: 1
+        #     update_config:
+        #         parallelism: 1
+        #         delay: 10s
+        #     restart_policy:
+        #         condition: on-failure
+# networks:
+#     auctions:
+#     proxy:
+#         external: true
