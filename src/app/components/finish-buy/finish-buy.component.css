@@ -1,11 +1,20 @@
 .saludo {
     font-size: 45px;
 }
-.formu{
+
+.formu {
     justify-content: center;
     display: flex;
-
 }
+
+.swal-text {
+    text-align: left
+}
+
+#swal2-content {
+    text-align: left!important
+}
+
 @media only screen and (max-width: 622px) {
     .formu {
         justify-content: center;

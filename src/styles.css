@@ -1,5 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
+@media (max-width: 600px) {
+    .background-bill {
+        background-image: url('assets/imgs/po4.png');
+        background-repeat: no-repeat;
+        /* background-attachment: fixed; */
+        background-size: cover;
+    }
+}
+
+@media (min-width: 600px) {
+    .background-bill {
+        background-image: url('assets/imgs/po.jpg');
+        background-repeat: no-repeat;
+        /* background-attachment: fixed; */
+        background-size: cover;
+    }
+}
+
 .background {
     background-image: url('assets/imgs/eat_opt.jpg');
     background-repeat: no-repeat;
@@ -9,13 +27,6 @@
 
 .background-categories {
     background-image: url('assets/imgs/menu-3167860_1280.jpg');
-    background-repeat: no-repeat;
-    /* background-attachment: fixed; */
-    background-size: cover;
-}
-
-.background-bill {
-    background-image: url('https://cdn.pixabay.com/photo/2014/02/01/18/00/money-256312_960_720.jpg');
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
     background-size: cover;
