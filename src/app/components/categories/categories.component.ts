@@ -7,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesComponent implements OnInit {
 
+  loading: boolean = false
+  timeLeft: number = 60;
+  interval;
   constructor() {
+    this.loading = true
+    this.interval = setInterval(() => {
+      this.loading = false
+    },500)
     window.scroll(0,0);
    }
 

@@ -1,5 +1,5 @@
 <app-loading *ngIf="loading"></app-loading>
-<div class="background centerCard" [ngStyle]="{'background-image': imageBack}" style="height: 47%;" *ngIf="!loading">
+<div class="background centerCard back-height" [ngStyle]="{'background-image': imageBack}"  *ngIf="!loading">
     <div class="card centerCard center title-product">
         <span class="quickSand size-title " style=" color: #280B0B; background-color:#ffffff ;opacity: 0.6;">
     {{word}}
@@ -14,7 +14,7 @@
     </div>
     <div class="container-fluid ">
         <div class="col-md-12 contain-item">
-            <app-product class="item" *ngFor="let item of products; let i = index" [index]="i" [product]="item"></app-product>
+            <app-product class="item fadeIn slow" *ngFor="let item of products; let i = index" [index]="i" [product]="item"></app-product>
         </div>
     </div>
 

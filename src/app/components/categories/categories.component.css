@@ -4,7 +4,15 @@
         width: 90%;
         height: 12em;
         margin-left: 2em;
-        border-radius: .75em;
+    }
+    .back-height {
+        height: 38%;
+    }
+    .carde-size {
+        height: 4em;
+        width: 20em;
+        margin-top: 7em;
+        opacity: 0.9;
     }
 }
 
@@ -15,6 +23,15 @@
         width: 14em;
         height: 13em;
         border-radius: .75em;
+    }
+    .back-height {
+        height: 47%;
+    }
+    .carde-size {
+        height: 6em;
+        width: 26em;
+        margin-top: 9em;
+        opacity: 0.9;
     }
 }
 

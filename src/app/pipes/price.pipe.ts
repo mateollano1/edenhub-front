@@ -9,6 +9,10 @@ export class PricePipe implements PipeTransform {
     // let newPrice: string = "";
     // let cadenaNueva="" ;
     // let cont=0
+    if (price == undefined) {
+      return
+    }
+    price = price.toString()
     let init = price.slice(0,price.length-3)
     let end = price.slice(price.length-3,price.length)
     return `$${init},${end} COP`
