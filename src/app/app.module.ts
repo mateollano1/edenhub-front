@@ -26,6 +26,7 @@ import { OrderTrackMoreDetailsComponent } from './components/order-track-more-de
 
 //Pipes
 import { PricePipe } from './pipes/price.pipe';
+import { NoItemsFoundComponent } from './components/shared/no-items-found/no-items-found.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { PricePipe } from './pipes/price.pipe';
     LoadingComponent,
     OrderTrackComponent,
     OrderTrackMoreDetailsComponent,
-    PricePipe
+    PricePipe,
+    NoItemsFoundComponent
   ],
   imports: [
     BrowserModule,
