@@ -4,6 +4,8 @@
             <input placeholder='Busca Tu producto' (keyup.enter)="search(word.value)" class='js-search shadow-lg' type="text" #word>
             <i class="fa fa-search" type="button" (click)="search(word.value)" style="font-size: 22px;"></i>
         </div>
+
+
     </div>
 </div>
 <div class="container-fluid m-3 mt-5 mb-5">
@@ -11,13 +13,15 @@
         <p>Resultados de Búsqueda para la palabra {{word}}: </p>
     </div>
 </div>
+
 <div class="row" style=" width: 100%;">
     <div class="container-fluid " style="margin-left: 15px;">
         <div style="margin: 0 auto; float: none;">
-
+            <app-no-items-found *ngIf="result"></app-no-items-found>
             <div class="col-md-12" style=" display: flex; flex-direction: row;flex-wrap: wrap; ">
                 <app-product *ngFor="let item of products; let i = index" [index]="i" [product]="item" style="margin-right: 25px; margin-bottom: 2em;"></app-product>
             </div>
         </div>
     </div>
+
 </div>

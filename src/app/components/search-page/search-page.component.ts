@@ -10,6 +10,7 @@ import { ProductsService } from '../../services/products.service';
 export class SearchPageComponent implements OnInit {
   word: string = ""
   products: any []
+  result:Boolean=false
   constructor(private route: ActivatedRoute,
               private router: Router,
               private productsService: ProductsService) { 
@@ -17,6 +18,12 @@ export class SearchPageComponent implements OnInit {
       this.word = params['q'];
       productsService.getProductsBySearch(this.word).subscribe(data =>{
         this.products = data['products']
+
+        if(this.products.length==0){
+          this.result=true
+          console.log("producto"+this.products.length);
+        }
+       
         window.scroll(0,0);
       })
   });
