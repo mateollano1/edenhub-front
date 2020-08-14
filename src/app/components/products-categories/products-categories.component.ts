@@ -12,6 +12,7 @@ export class ProductsCategoriesComponent implements OnInit {
   products: any[] = []
   word: string = ""
   imageBack = ""
+  notFound: boolean = false
   loading: boolean = true
   constructor(
     private productsService: ProductsService,
@@ -28,10 +29,14 @@ export class ProductsCategoriesComponent implements OnInit {
   }
   getProducts() {
     this.products = []
+    this.notFound = false
     this.productsService.getProductsByCategory(this.typeName).subscribe((data: any) => {
       this.products = data['products']
       this.imageBack = `url('${data['image']}')`
       this.loading = false
+      if (this.products.length==0) {
+        this.notFound = true
+      }
     })
   }
 

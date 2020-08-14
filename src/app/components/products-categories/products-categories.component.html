@@ -16,6 +16,9 @@
         <div class="col-md-12 contain-item ">
             <app-product class="item " *ngFor="let item of products; let i = index" [index]="i" [product]="item"></app-product>
         </div>
+        <app-no-items-found *ngIf="notFound"></app-no-items-found>
+
+
     </div>
 
 </div>
