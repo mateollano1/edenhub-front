@@ -2,7 +2,9 @@
 
 
     <div class="card shadow-lg producter fadeIn slow">
-        <img class="card-img-top" data-toggle="modal" [attr.data-target]="'#test' + index" height="160" width="240" style="border-top-left-radius: 1.25rem!important; border-top-right-radius: 1.25rem!important" [src]="product['thumbnails'][0]['url']" alt="Card image cap">
+        <img class="card-img-top" data-toggle="modal" [attr.data-target]="'#test' + index" height="160" width="240"
+            style="border-top-left-radius: 1.25rem!important; border-top-right-radius: 1.25rem!important"
+            [src]="product['thumbnails'][0]['url']" alt="Card image cap">
         <!-- <div class="card shadow-lg circle">
         <div class="row">
             <div class="col-md-6 centerCard">
@@ -50,12 +52,14 @@
         <div class="row">
             <div class="col-md-12  mt-4 mb-4 center">
                 <!-- <img src="../../../../assets/imgs/carroCom.png" width="40px" alt=""> -->
-                <button class="btn " data-toggle="modal" [attr.data-target]="'#test' + index" style="background: #FF6600; color: white; font-size: 13px; ">
-                Ver Más
-            </button>
-                <button class="btn ml-2" (click)="saveInCart()" style="background: #008000; color: white;font-size: 13px;">
-                <span class="buy-icon material-icons " style="font-size: 13px;">shopping_cart</span> Agregar carrito
-    </button>
+                <button class="btn " data-toggle="modal" [attr.data-target]="'#test' + index"
+                    style="background: #FF6600; color: white; font-size: 13px; ">
+                    Ver Más
+                </button>
+                <button class="btn ml-2" (click)="saveInCart()"
+                    style="background: #008000; color: white;font-size: 13px;">
+                    <span class="buy-icon material-icons " style="font-size: 13px;">shopping_cart</span> Agregar carrito
+                </button>
 
 
             </div>
@@ -70,14 +74,15 @@
 
 
     <!-- Modal -->
-    <div class="modal fade" id="test{{index}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="test{{index}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content" style="width: 80em; height: 30em;">
                 <div class="modal-header">
                     <h5 class="modal-title montserrat" id="exampleModalLongTitle">{{product.name}}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
@@ -96,16 +101,28 @@
 
                                     <div class="row">
                                         <div class="col-3 " type="button">
-                                            <img src="../../../../assets/imgs/mas.png" type="button" (click)="plus()" width="15px" height="15px">
+                                            <img src="../../../../assets/imgs/mas.png" type="button" (click)="plus()"
+                                                width="15px" height="15px">
                                         </div>
                                         <div class="col-3 ">
                                             {{cantidad}}
                                         </div>
                                         <div class="col-3  " type="button">
-                                            <img src="../../../../assets/imgs/menos.png" type="button" (click)="minus()" width="15px" height="15px">
+                                            <img src="../../../../assets/imgs/menos.png" type="button" (click)="minus()"
+                                                width="15px" height="15px">
                                         </div>
                                     </div>
                                 </div>
+
+                            </div>
+                            <div class="row ml-4 mt-4">
+                                <ul class="item-lu mr-auto ">
+                                    <li class="item-li mb-2" *ngFor="let item of product['items']; let i = index" style="margin-left: 0;">
+                                        <div class="item-col" (click)="itemSelected(i)" [ngClass]="{pro: itemSel[i]}" type="button">
+                                            <span>{{item.name}}</span>
+                                        </div>
+                                    </li>
+                                </ul>
 
                             </div>
                             <div class="row mt-4">
@@ -119,8 +136,10 @@
 
                             </div>
                             <div class="col-md-12 mt-4 mb-4 buttonCelu ">
-                                <button class="btn" (click)="saveInCart()" style="background: #008000; color: white;font-size: 13px;">
-                                    <span class="buy-icon material-icons " style="font-size: 13px;">shopping_cart</span> Agregar carrito
+                                <button class="btn" (click)="saveInCart()"
+                                    style="background: #008000; color: white;font-size: 13px;">
+                                    <span class="buy-icon material-icons " style="font-size: 13px;">shopping_cart</span>
+                                    Agregar carrito
                                 </button>
                             </div>
                         </div>

@@ -21,6 +21,7 @@
                     <th scope="col">Orden</th>
                     <th scope="col">Precio</th>
                     <th scope="col">Cantidad</th>
+                    <th scope="col">Items</th>
                 </tr>
             </thead>
             <tbody>
@@ -28,10 +29,7 @@
                     <td>{{item['idProduct']['name']}}</td>
                     <td>{{item['idProduct']['price']}}</td>
                     <td>{{item['ammount']}}</td>
-                    <!-- <td>{{item['location']}}</td>
-                    <td><button (click)="more(i)" class="btn btn-secondary">
-                        Ver Más
-                    </button></td> -->
+                    <td>{{item['items']}}</td>
                 </tr>
 
             </tbody>

@@ -4,4 +4,9 @@ export class Product{
     price: string
     description: string
     images: Images
+    items: [{
+        name: string,
+        url: string
+    }]
+    letSelectedItems: number
 }
