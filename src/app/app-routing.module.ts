@@ -8,6 +8,7 @@ import { ProductsCategoriesComponent } from './components/products-categories/pr
 import { FinishBuyComponent } from './components/finish-buy/finish-buy.component';
 import { OrderTrackComponent } from './components/order-track/order-track.component';
 import { OrderTrackMoreDetailsComponent } from './components/order-track-more-details/order-track-more-details.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,9 @@ const routes: Routes = [
   { path: 'factura', component: FinishBuyComponent },
   { path: 'order/track', component: OrderTrackComponent },
   { path: 'order/track/:id', component: OrderTrackMoreDetailsComponent },
+  { path: 'login', component: LoginComponent },
   { path: '', redirectTo: '', pathMatch: 'full' },
+  
   // { path: '**', component: PresentationPageComponent },
 ];
 
