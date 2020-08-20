@@ -43,7 +43,6 @@
     .logo {
         width: 158px;
     }
-
 }
 
 @media (max-width: 600px) {
@@ -163,3 +162,6 @@ i {
     background-size: cover; */
 }
 
+.modal-body {
+    overflow-y: auto;
+}

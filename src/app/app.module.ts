@@ -28,6 +28,7 @@ import { OrderTrackMoreDetailsComponent } from './components/order-track-more-de
 //Pipes
 import { PricePipe } from './pipes/price.pipe';
 import { NoItemsFoundComponent } from './components/shared/no-items-found/no-items-found.component';
+import { LoginComponent } from './components/login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,8 @@ import { NoItemsFoundComponent } from './components/shared/no-items-found/no-ite
     OrderTrackComponent,
     OrderTrackMoreDetailsComponent,
     PricePipe,
-    NoItemsFoundComponent
+    NoItemsFoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
