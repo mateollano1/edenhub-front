@@ -1,43 +1,53 @@
 <app-loading *ngIf="loading"></app-loading>
-<div class="background resp-back" *ngIf="!loading">
+
+<div class="background resp-back" style="width: 100%; overflow-y: hidden;" *ngIf="!loading">
 
     <div class="container resp-card ">
         <div class="row ">
-            <div class="col-md-12">
-                <div class="card base shadow-lg pl-3 pr-3 mb-5 bg-white rounded presentation">
+            <div class="col-md-12 centerCard">
+                <div class="card base shadow-lg pl-3 pr-3 mb-5 bg-white rounded presentation ">
                     <div class="col-md-12 shadow-lg circle " style="text-align: center;">
                         <img src="../../../assets/imgs/eden_hub4.png" class="logo" alt="">
                     </div>
-                    <div class="card-body montserrat " style="margin-top: 9em;">
+                    <div class="card-body montserrat top-letter">
                         <div class="row">
                             <div class="col-md-12 centerCard quickSand">
-                                <h5 style="margin-left: 10px;text-align:center">El repositorio de locales del Oriente Antioqueño</h5>
+                                <h5 style="margin-left: 10px;text-align:center">El repositorio de locales del Oriente
+                                    Antioqueño</h5>
                             </div>
                             <div class="container1 mt-4 montserrat ">
-                                <input placeholder='Busca Tu producto' (keyup.enter)="search(word.value)" class='js-search ' type="text" #word>
-                                <i class="fa fa-search" (click)="search(word.value)" type="button" style="font-size: 22px;"></i>
+                                <input placeholder='Busca Tu producto' (keyup.enter)="search(word.value)"
+                                    class='js-search ' type="text" #word>
+                                <i class="fa fa-search" (click)="search(word.value)" type="button"
+                                    style="font-size: 22px;"></i>
                             </div>
                         </div>
                         <div class="row quickSand centerCard mt-4" style="font-size: 20px;">
                             <div class="col-md-4">
-                                <div class="card categorias mini-card shadow-lg " [routerLink]="['/categorias']" routerLinkActive="router-link-active" style="border-radius: 0.75rem!important; " type="button">
+                                <div class="card categorias mini-card shadow-lg " [routerLink]="['/categorias']"
+                                    routerLinkActive="router-link-active" style="border-radius: 0.75rem!important; "
+                                    type="button">
                                     <span>
-                                Categorias
-                            </span>
+                                        Categorias
+                                    </span>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="card categorias shadow-lg mini-card" [routerLink]="['/categorias/promociones']" routerLinkActive="router-link-active" style="border-radius: 0.75rem!important" type="button">
+                                <div class="card categorias shadow-lg mini-card"
+                                    [routerLink]="['/categorias/promociones']" routerLinkActive="router-link-active"
+                                    style="border-radius: 0.75rem!important" type="button">
                                     <span>
-                                Promociones
-                            </span>
+                                        Promociones
+                                    </span>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="card categorias shadow-lg mini-card" [routerLink]="['/categorias/regalos']" routerLinkActive="router-link-active" style="border-radius: 0.75rem!important" type="button">
+                                <div class="card categorias shadow-lg mini-card" [routerLink]="['/categorias/regalos']"
+                                    routerLinkActive="router-link-active" style="border-radius: 0.75rem!important"
+                                    type="button">
                                     <span>
-                                Regalos
-                            </span>
+                                        Regalos
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -45,8 +55,10 @@
                             <span>Familia Hub:</span>
                         </div>
                         <div class="row centerCard">
-                            <div *ngFor="let item of companies; let i = index" class="card" style="width: 1.5em;height: 1.5em; margin-left: 10px;">
-                                <img [src]="item.icon" title="{{item.name}}" data-toggle="modal" [attr.data-target]="'#company'+i " alt="ex" width="100%">
+                            <div *ngFor="let item of companies; let i = index" class="card"
+                                style="width: 1.5em;height: 1.5em; margin-left: 10px;">
+                                <img [src]="item.icon" title="{{item.name}}" data-toggle="modal"
+                                    [attr.data-target]="'#company'+i " alt="ex" width="100%">
                             </div>
                         </div>
                     </div>
@@ -56,14 +68,15 @@
     </div>
 </div>
 
-<div *ngFor="let item of companies; let i = index" class="modal fade" id="company{{i}}" tabindex="1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div *ngFor="let item of companies; let i = index" class="modal fade" id="company{{i}}" tabindex="1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content" style="width: 80em; height: 30em;">
             <div class="modal-header">
                 <h5 class="modal-title montserrat" id="exampleModalLongTitle"></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             <div class="modal-body">
                 <div class="row">

@@ -4,18 +4,28 @@ import { Product } from '../../../models/product';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { MatCarousel, MatCarouselComponent } from '@ngmodule/material-carousel';
+
+
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
+
+
 export class ProductComponent implements OnInit {
+
   closeResult: string;
   cantidad: number = 1
   itemSel: boolean[] = []
   numberSelected: number = 0
+  productImages: any []=['https://edenhub-images.s3.amazonaws.com/arepas/plato2_thumb.png','https://edenhub-images.s3.amazonaws.com/arepas/plato2_thumb.png']
+
   @Input() product: Product;
   @Input() index: string;
+
+
   constructor(private modalService: NgbModal,
     private router: Router) {
 
@@ -23,6 +33,7 @@ export class ProductComponent implements OnInit {
 
   ngOnInit(): void {
     this.setItemsFalse()
+
   }
 
 
@@ -90,7 +101,9 @@ export class ProductComponent implements OnInit {
 
 
   setItemsFalse() {
-    for (var i = 0; i < this.product.items.length; ++i) { this.itemSel[i] = false; }
+    if (this.product.items !== undefined) {
+      for (var i = 0; i < this.product.items.length; ++i) { this.itemSel[i] = false; }
+    }
   }
 
 

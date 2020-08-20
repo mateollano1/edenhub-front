@@ -88,7 +88,29 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="card">
-                                <img class="product " [src]="product['images'][0]['url']">
+                                <!-- <img class="product " [src]="product['images'][0]['url']"> -->
+                                <mat-carousel class="product"
+                                timings="250ms ease-in"
+                                [autoplay]="true"
+                                interval="3000"
+                                color="accent"
+                                maxWidth="auto"
+                                proportion="80"
+                                slides="5"
+                                [loop]="true"
+                                [hideArrows]="false"
+                                [hideIndicators]="false"
+                                [useKeyboard]="true"
+                                [useMouseWheel]="false"
+                                orientation="ltr"
+                              >
+                                <mat-carousel-slide class="product"
+                                  #matCarouselSlide
+                                  *ngFor="let slide of product['thumbnails'] let i = index"
+                                  [image]="slide.url"
+                                  [hideOverlay]="true"
+                                ></mat-carousel-slide>
+                              </mat-carousel>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -100,15 +122,16 @@
                                     <p class="card-text montserrat "><strong>Cantidad:</strong> </p>
 
                                     <div class="row">
-                                        <div class="col-3 " type="button">
-                                            <img src="../../../../assets/imgs/mas.png" type="button" (click)="plus()"
+                                        <div class="col-3  " type="button">
+                                            <img src="../../../../assets/imgs/menos.png" type="button" (click)="minus()"
                                                 width="15px" height="15px">
                                         </div>
+                                       
                                         <div class="col-3 ">
                                             {{cantidad}}
                                         </div>
-                                        <div class="col-3  " type="button">
-                                            <img src="../../../../assets/imgs/menos.png" type="button" (click)="minus()"
+                                        <div class="col-3 " type="button">
+                                            <img src="../../../../assets/imgs/mas.png" type="button" (click)="plus()"
                                                 width="15px" height="15px">
                                         </div>
                                     </div>
@@ -125,12 +148,12 @@
                                 </ul>
 
                             </div>
-                            <div class="row mt-4">
+                            <div class="row mt-2">
                                 <div class="col-md-11 celDescription ">
                                     <p class="montserrat "><strong>Descripción: </strong></p>
                                     <!-- <p style="text-align: justify;" class="center"> -->
-                                    <p class="">
-                                        {{product.description}}
+                                    <p [innerHTML]="product.description" style="font-size: 14px;">
+                                        <!-- {{product.description}} -->
                                     </p>
                                 </div>
 
