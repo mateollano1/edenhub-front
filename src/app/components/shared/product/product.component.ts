@@ -1,11 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import Swal from 'sweetalert2'
 import { Product } from '../../../models/product';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MatCarousel, MatCarouselComponent } from '@ngmodule/material-carousel';
-
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-product',
@@ -20,11 +19,13 @@ export class ProductComponent implements OnInit {
   cantidad: number = 1
   itemSel: boolean[] = []
   numberSelected: number = 0
-  productImages: any []=['https://edenhub-images.s3.amazonaws.com/arepas/plato2_thumb.png','https://edenhub-images.s3.amazonaws.com/arepas/plato2_thumb.png']
+  productImages: any[] = ['https://edenhub-images.s3.amazonaws.com/arepas/plato2_thumb.png', 'https://edenhub-images.s3.amazonaws.com/arepas/plato2_thumb.png']
+  items: boolean = false
 
   @Input() product: Product;
   @Input() index: string;
 
+  mod: any
 
   constructor(private modalService: NgbModal,
     private router: Router) {
@@ -33,41 +34,45 @@ export class ProductComponent implements OnInit {
 
   ngOnInit(): void {
     this.setItemsFalse()
+    if (this.product['items'].length > 0) {
+      this.items = true
+    }
 
   }
-
 
   itemSelected(i) {
     if (this.itemSel[i]) {
       this.itemSel[i] = false
-      this.numberSelected --
+      this.numberSelected--
       return
     }
     if (this.product.letSelectedItems == this.numberSelected) {
       this.setFirstItemFalse()
-      this.numberSelected --
+      this.numberSelected--
     }
     this.itemSel[i] = !this.itemSel[i]
     this.numberSelected++
   }
 
-  
+
   saveInCart() {
     let idProduct = this.product['_id'] + " X" + this.cantidad
-    let productCar ={
-      idProduct:this.product['_id'],
+    let productCar = {
+      idProduct: this.product['_id'],
       units: this.cantidad,
-      items:[],
-      note:""
+      items: [],
+      note: ""
     }
-    for (var i = 0; i < this.product.items.length; ++i) { 
-      if (this.itemSel[i]) {
-        productCar.items.push(this.product.items[i]['name'])
+    if (this.product.items !== undefined) {
+      for (var i = 0; i < this.product.items.length; ++i) {
+        if (this.itemSel[i]) {
+          productCar.items.push(this.product.items[i]['name'])
+        }
       }
-     }
-     console.log(productCar);
-     
-     let cartProducts = JSON.parse(sessionStorage.getItem("products"));
+    }
+    console.log(productCar);
+
+    let cartProducts = JSON.parse(sessionStorage.getItem("products"));
     if (cartProducts == null) {
       cartProducts = [productCar]
     }
@@ -108,10 +113,12 @@ export class ProductComponent implements OnInit {
 
 
   setFirstItemFalse() {
-    for (var i = 0; i < this.product.items.length; ++i) {
-      if (this.itemSel[i]) {
-        this.itemSel[i] = false;
-        return
+    if (this.product.items !== undefined) {
+      for (var i = 0; i < this.product.items.length; ++i) {
+        if (this.itemSel[i]) {
+          this.itemSel[i] = false;
+          return
+        }
       }
     }
   }
@@ -131,10 +138,17 @@ export class ProductComponent implements OnInit {
         'Ir al carrito'
     }).then((result) => {
       if (!result.value) {
+        // Swal.close()
+        sessionStorage.setItem('reload', '1')
         this.router.navigateByUrl('/factura')
+
+        // window.location.href = "/#/factura";
       }
     })
+    // this.router.navigateByUrl('/factura')
+
   }
+
 
 
 }

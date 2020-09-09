@@ -38,9 +38,9 @@
     white-space: nowr
 }
 
-.item-col:hover {
+/* .item-col:hover {
     border: 2px solid #FF6600;
-}
+} */
 
 .pro {
     border: 2px solid #FF6600;
@@ -95,5 +95,8 @@
     }
     .buttonCelu {
         margin-left: 2px;
+    }
+    .item-col:hover {
+        border: 2px solid #FF6600;
     }
 }

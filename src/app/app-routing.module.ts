@@ -9,6 +9,7 @@ import { FinishBuyComponent } from './components/finish-buy/finish-buy.component
 import { OrderTrackComponent } from './components/order-track/order-track.component';
 import { OrderTrackMoreDetailsComponent } from './components/order-track-more-details/order-track-more-details.component';
 import { LoginComponent } from './components/login/login.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'search', component: SearchPageComponent },
   { path: 'categorias/:name', component: ProductsCategoriesComponent },
   { path: 'factura', component: FinishBuyComponent },
+  { path: 'about', component: AboutComponent },
   { path: 'order/track', component: OrderTrackComponent },
   { path: 'order/track/:id', component: OrderTrackMoreDetailsComponent },
   { path: 'login', component: LoginComponent },

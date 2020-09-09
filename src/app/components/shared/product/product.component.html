@@ -5,37 +5,21 @@
         <img class="card-img-top" data-toggle="modal" [attr.data-target]="'#test' + index" height="160" width="240"
             style="border-top-left-radius: 1.25rem!important; border-top-right-radius: 1.25rem!important"
             [src]="product['thumbnails'][0]['url']" alt="Card image cap">
-        <!-- <div class="card shadow-lg circle">
-        <div class="row">
-            <div class="col-md-6 centerCard">
-                <a class="mt-1 ml-3">
-                    +
-                </a>
-            </div>
-            <div class="col-md-6 centerCard" class="mt-1 ml-3">
-                -
-            </div>
-        </div>
-    </div> -->
+
         <h5 class="card-title m-2 center montserrat ml-3 mr-3">{{product.name}}</h5>
+
         <div class="">
             <div class="col-md-11 mt-1">
                 <span class="card-text montserrat m-2  "><strong>Precio: </strong> </span>
                 <span class="card-text roboto m-2">{{product.price | price }} </span>
             </div>
         </div>
+
         <div class="col-md-5 ml-2 mt-2 ">
             <p class="card-text montserrat "><strong>Unidades:</strong> </p>
         </div>
+
         <div class="row centerCard">
-            <!-- <div class="col-2 ml-2 mt-2">
-        <div class="row">
-            <div class="col-md-5 ml-2 mt-2 ">
-                <p class="card-text montserrat  "><strong>Cantidad:</strong> </p>
-            </div>
-            <div class="col-2 ml-2 mt-2">
-                <img type="button" (click)="plus()" src="../../../../assets/imgs/mas.png" width="15px" height="15px">
-            </div> -->
             <div class="col-2 ml-2 mt-2 ">
                 <img type="button" (click)="minus()" src="../../../../assets/imgs/menos.png" width="15px" height="15px">
             </div>
@@ -45,10 +29,8 @@
             <div class="col-2  mt-2">
                 <img type="button" (click)="plus()" src="../../../../assets/imgs/mas.png" width="15px" height="15px">
             </div>
-            <!-- <div class="col-2 mt-2 ">
-                <img type="button" (click)="minus()" src="../../../../assets/imgs/menos.png" width="15px" height="15px">
-            </div> -->
         </div>
+
         <div class="row">
             <div class="col-md-12  mt-4 mb-4 center">
                 <!-- <img src="../../../../assets/imgs/carroCom.png" width="40px" alt=""> -->
@@ -63,8 +45,6 @@
 
 
             </div>
-            <!-- <div class="col-md-6 mt-4 mb-4">
-        </div> -->
         </div>
 
     </div>
@@ -89,35 +69,35 @@
                         <div class="col-md-6">
                             <div class="card">
                                 <!-- <img class="product " [src]="product['images'][0]['url']"> -->
-                                <mat-carousel class="product"
-                                timings="250ms ease-in"
-                                [autoplay]="true"
-                                interval="3000"
-                                color="accent"
-                                maxWidth="auto"
-                                proportion="80"
-                                slides="5"
-                                [loop]="true"
-                                [hideArrows]="false"
-                                [hideIndicators]="false"
-                                [useKeyboard]="true"
-                                [useMouseWheel]="false"
-                                orientation="ltr"
-                              >
-                                <mat-carousel-slide class="product"
-                                  #matCarouselSlide
-                                  *ngFor="let slide of product['thumbnails'] let i = index"
-                                  [image]="slide.url"
-                                  [hideOverlay]="true"
-                                ></mat-carousel-slide>
-                              </mat-carousel>
+                                <mat-carousel class="product" timings="250ms ease-in" [autoplay]="true" interval="3000"
+                                    color="accent" maxWidth="auto" proportion="80" slides="5" [loop]="true"
+                                    [hideArrows]="false" [hideIndicators]="false" [useKeyboard]="true"
+                                    [useMouseWheel]="false" orientation="ltr">
+                                    <mat-carousel-slide class="product" #matCarouselSlide
+                                        *ngFor="let slide of product['images'] let i = index" [image]="slide.url"
+                                        [hideOverlay]="true"></mat-carousel-slide>
+                                </mat-carousel>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <p class="card-text montserrat ml-4 celuPrice"><strong>Precio: </strong> </p>
-                            <p class="card-text roboto ml-4">{{product.price | price}} </p>
+                            <div *ngIf="!items">
+                                <p class="card-text montserrat ml-4 celuPrice"><strong>Precio: </strong> </p>
+                                <p class="card-text roboto ml-4">{{product.price | price}} </p>
+                            </div>
+                            <div *ngIf="items">
+                                <div class="row">
+                                    <div class="col-md-4">
 
-                            <div class="row ml-2">
+                                        <p class="card-text montserrat ml-4 celuPrice"><strong>Precio: </strong> </p>
+                                    </div>
+                                    <div class="col-md-8">
+
+                                        <p class="card-text roboto ml-4">{{product.price | price}} </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row ml-2 mt-2" *ngIf="!items">
                                 <div class="col-md-6">
                                     <p class="card-text montserrat "><strong>Cantidad:</strong> </p>
 
@@ -126,7 +106,7 @@
                                             <img src="../../../../assets/imgs/menos.png" type="button" (click)="minus()"
                                                 width="15px" height="15px">
                                         </div>
-                                       
+
                                         <div class="col-3 ">
                                             {{cantidad}}
                                         </div>
@@ -138,10 +118,40 @@
                                 </div>
 
                             </div>
-                            <div class="row ml-4 mt-4">
-                                <ul class="item-lu mr-auto ">
-                                    <li class="item-li mb-2" *ngFor="let item of product['items']; let i = index" style="margin-left: 0;">
-                                        <div class="item-col" (click)="itemSelected(i)" [ngClass]="{pro: itemSel[i]}" type="button">
+                            <div class="mt-2" *ngIf="items">
+                                <div class="row">
+                                    <div class="col-md-4">
+
+                                        <p class="card-text montserrat ml-4"><strong>Cantidad:</strong> </p>
+
+                                    </div>
+                                    <div class="col-md-4 ml-2">
+
+                                        <div class="row centerCard">
+                                            <div class="col-2  " type="button">
+                                                <img src="../../../../assets/imgs/menos.png" type="button"
+                                                    (click)="minus()" width="15px" height="15px">
+                                            </div>
+
+                                            <div class="col-2 ">
+                                                {{cantidad}}
+                                            </div>
+                                            <div class="col-2 " type="button">
+                                                <img src="../../../../assets/imgs/mas.png" type="button"
+                                                    (click)="plus()" width="15px" height="15px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row ml-4 mt-3">
+                                <p class="card-text montserrat" *ngIf="items"><strong>Selecciona:</strong> </p>
+                                <ul class="item-lu mr-auto mt-1">
+                                    <li class="item-li mb-2" *ngFor="let item of product['items']; let i = index"
+                                        style="margin-left: 0;">
+                                        <div class="item-col" (click)="itemSelected(i)" [ngClass]="{pro: itemSel[i]}"
+                                            type="button">
                                             <span>{{item.name}}</span>
                                         </div>
                                     </li>
@@ -152,7 +162,8 @@
                                 <div class="col-md-11 celDescription ">
                                     <p class="montserrat "><strong>Descripción: </strong></p>
                                     <!-- <p style="text-align: justify;" class="center"> -->
-                                    <p [innerHTML]="product.description" style="font-size: 14px;">
+                                    <p [innerHTML]="product.description" style="font-size: 14px; text-align: justify;
+                                    text-justify: inter-word;">
                                         <!-- {{product.description}} -->
                                     </p>
                                 </div>

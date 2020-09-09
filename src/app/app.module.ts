@@ -24,11 +24,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { OrderTrackComponent } from './components/order-track/order-track.component';
 import { OrderTrackMoreDetailsComponent } from './components/order-track-more-details/order-track-more-details.component';
+import {ClipboardModule} from '@angular/cdk/clipboard';
 
 //Pipes
 import { PricePipe } from './pipes/price.pipe';
 import { NoItemsFoundComponent } from './components/shared/no-items-found/no-items-found.component';
 import { LoginComponent } from './components/login/login.component';
+import { AboutComponent } from './components/about/about.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +48,8 @@ import { LoginComponent } from './components/login/login.component';
     OrderTrackMoreDetailsComponent,
     PricePipe,
     NoItemsFoundComponent,
-    LoginComponent
+    LoginComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -57,6 +60,7 @@ import { LoginComponent } from './components/login/login.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    ClipboardModule,
     MatCarouselModule.forRoot()
   ],
   providers: [],
