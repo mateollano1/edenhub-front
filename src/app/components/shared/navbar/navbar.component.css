@@ -1,0 +1,24 @@
+.icono {
+    height: 45px;
+    display: inline-block;
+    align-items: center;
+    padding-bottom: 0.7rem;
+}
+
+.contenedor-header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 80%;
+}
+
+.navegacion a:lastof-type {
+    margin: 0;
+    margin-left: 40%;
+}
+
+.navegacion {
+    align-items: unset;
+    margin-top: 2%;
+}
