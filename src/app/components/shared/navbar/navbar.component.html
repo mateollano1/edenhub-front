@@ -1,15 +1,16 @@
 <nav class="navbar quickSand navbar-expand-md navbar-light bg-light" style="font-size: 20px;position: fixed; 
 top: 0; left: 0;  width: 100%;z-index:9999;">
-    <a class="navbar-brand" [routerLink]="['/']" routerLinkActive="router-link-active"> <img src="../../../../assets/imgs/mini_logo.png" width="30" height="35" class="d-inline-block align-top" alt=""></a>
+    <a class="navbar-brand" [routerLink]="['/']" routerLinkActive="router-link-active"> <img src="../../../../assets/imgs/logo-nar.png" width="110" class="d-inline-block align-top" alt=""></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="collapse navbar-collapse text-center" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <a class="nav-item nav-link " [routerLink]="['/categorias']" routerLinkActive="router-link-active">Categorias <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" [routerLink]="['/categorias/promociones']" routerLinkActive="router-link-active">Promociones</a>
             <a class="nav-item nav-link" [routerLink]="['/categorias/regalos']" routerLinkActive="router-link-active">Regalos</a>
-            <a class="nav-item nav-link ">¿Quiénes somos?</a>
+            <a class="nav-item nav-link" [routerLink]="['/about']" routerLinkActive="router-link-active">¿Quiénes somos?</a>
+            <a class="nav-item nav-link" [routerLink]="['/about']" routerLinkActive="router-link-active"><img src="../../../../assets/imgs/carroCom.png" class="icono"></a>
         </div>
     </div>
 </nav>
