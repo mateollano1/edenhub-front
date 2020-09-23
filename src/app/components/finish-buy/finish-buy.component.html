@@ -15,7 +15,7 @@
 
 </div>
 <div class="row mb-5" style="width: 100%;">
-    <div class="col-md-4 ml-5 mt-5">
+    <!--<div class="col-md-4 ml-5 mt-5">
         <span class="quickSand saludo" style="margin-top: 10em;">
         ¡Finalizar Compra!
     </span>
@@ -26,9 +26,36 @@
             Puedes pagar directamente a nuestro domiciliario en efectivo, o solicitar QR al momento de recibir tu producto.
         </p>
         <p style="text-align: justify;"> <small>** Estamos trabajando para proximamente tener más formas de pago.</small></p>
+    </div>-->
+    <div class="col-md-6 mt-5 formu">
+        <p class="centerCard" style="font-size: 20px;">
+            Te pedimos completes la siguiente información para llevar lo más pronto posible tu pedido:
+        </p>
+        <form [formGroup]='bill'>
+            <div class="form-group">
+                <label for="formGroupExampleInput">Nombre y Apellidos <span style="color: brown; font-size: 10px;">(* campo requerido)</span></label>
+                <input type="text" formControlName="name" class="form-control" id="formGroupExampleInput">
+            </div>
+            <div class="form-group">
+                <label for="">Dirección <span style="color: brown; font-size: 10px;" >(* campo requerido)</span ></label>
+                <input type="address" formControlName="location" class="form-control" id="">
+            </div>
+            <div class="form-group">
+                <label for="">Teléfono <span style="color: brown; font-size: 10px;">(* campo requerido)</span></label>
+                <input type="tel" formControlName="telephone" class="form-control" id="">
+            </div>
+            <div class="form-group mb">
+                <label for="exampleFormControlTextarea1">Nota:</label>
+                <textarea class="form-control" formControlName="note" id="exampleFormControlTextarea1" rows="3" placeholder="¿Quieres dejarnos alguna nota o indicación? Este es el lugar."></textarea>
+            </div>
+            <div class="center mb-5">
+                <button (click)="savePurchase()" class="btn" style="background-color: #ff6600; color: white ;">Finalizar Compra</button>
+            </div>
+        </form>
+
     </div>
-    <div class="col-md-7 mt-5 centerCard">
-        <div class="card shadow-lg ml-4" style="width: 100%; height: 20em;  border-radius: 1.25rem!important; overflow-y: scroll;border-color: #FFEEAA; border-width: 5px;">
+    <div class="col-md-6 mt-5 centerCard">
+        <div class="card shadow-lg ml-4" style="width: 100%; height: 30em;  border-radius: 1.25rem!important; overflow-y: scroll;border-color: #FFEEAA; border-width: 5px;">
             <h5 class="card-title mt-4 center montserrat"><strong> Resumen de tu Compra:</strong> </h5>
             <div class="card-body">
                 <table class="table table-responsive-sm table-borderless">
@@ -61,32 +88,3 @@
     </div>
 </div>
 
-<div class="row formu" style="width:100%;">
-    <div class="col-md-6 mt-5 ">
-        <p class="centerCard" style="font-size: 20px;">
-            Te pedimos completes la siguiente información para llevar lo más pronto posible tu pedido:
-        </p>
-        <form [formGroup]='bill'>
-            <div class="form-group">
-                <label for="formGroupExampleInput">Nombre y Apellidos <span style="color: brown; font-size: 10px;">(* campo requerido)</span></label>
-                <input type="text" formControlName="name" class="form-control" id="formGroupExampleInput">
-            </div>
-            <div class="form-group">
-                <label for="">Dirección <span style="color: brown; font-size: 10px;" >(* campo requerido)</span ></label>
-                <input type="address" formControlName="location" class="form-control" id="">
-            </div>
-            <div class="form-group">
-                <label for="">Teléfono <span style="color: brown; font-size: 10px;">(* campo requerido)</span></label>
-                <input type="tel" formControlName="telephone" class="form-control" id="">
-            </div>
-            <div class="form-group mb">
-                <label for="exampleFormControlTextarea1">Nota:</label>
-                <textarea class="form-control" formControlName="note" id="exampleFormControlTextarea1" rows="3" placeholder="¿Quieres dejarnos alguna nota o indicación? Este es el lugar."></textarea>
-            </div>
-            <div class="center mb-5">
-                <button (click)="savePurchase()" class="btn" style="background-color: #008000; color: white ;">Finalizar Compra</button>
-            </div>
-        </form>
-
-    </div>
-</div>
