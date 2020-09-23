@@ -21,3 +21,22 @@
         display: inline;
     }
 }
+
+.contenedor h1 {
+    font-family: 'Lobster', cursive;
+    color: #ffffff;
+    justify-content: center;
+    text-align: center;
+    margin-top: 45%;
+    font-size: 70px;
+}
+
+.quienes {
+    justify-content: center;
+    align-items: center;
+}
+
+.quienes h2 {
+    color: #ffffff;
+    margin-top: -5%;
+}
