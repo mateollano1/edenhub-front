@@ -71,7 +71,7 @@
 <div *ngFor="let item of companies; let i = index" class="modal fade" id="company{{i}}" tabindex="1" role="dialog"
     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content" style="width: 80em; height: 30em;">
+        <div class="modal-content" style="width: 60em; height: 20em;">
             <div class="modal-header">
                 <h5 class="modal-title montserrat" id="exampleModalLongTitle"></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -86,9 +86,9 @@
                     <div class="col centerCard mt-2 quickSand">
                         {{item.name}}
                     </div>
-                    <div class="col-12 centerCard mt-2 quickSand" style="text-align: justify; margin-right: 4px;margin-left: 4px;">
+                    <!-- <div class="col-12 centerCard mt-2 quickSand" style="text-align: justify; margin-right: 4px;margin-left: 4px;">
                         {{item.history}}
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
