@@ -22,3 +22,8 @@
     align-items: unset;
     margin-top: 2%;
 }
+
+.nav-item,
+.nav-link {
+    color: #ffffff !important;
+}
