@@ -3,10 +3,7 @@
 }
 
 .formu {
-    padding-left: 5%;   
-
-    
-    
+    padding-left: 5%;
 }
 
 .swal-text {
@@ -21,7 +18,7 @@
     .formu {
         justify-content: center;
         display: inline;
-       
+        margin-left: 1rem;
     }
 }
 
