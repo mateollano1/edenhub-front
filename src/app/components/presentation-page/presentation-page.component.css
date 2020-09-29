@@ -27,7 +27,7 @@
     .resp-card {
         margin-bottom: 2em;
     }
-    .titulo_carta{
+    .titulo_carta {
         font-size: 50px !important;
     }
 }
@@ -43,7 +43,7 @@
     .logo {
         width: 158px;
     }
-    .titulo_carta{
+    .titulo_carta {
         font-size: 35px !important;
     }
 }
@@ -86,7 +86,7 @@
         top: -80px;
         background: #FFEEAA;
     }
-    .titulo_carta{
+    .titulo_carta {
         font-size: 35px !important;
     }
 }
@@ -141,7 +141,6 @@ i {
     height: 5rem;
     padding: 20px 10px 20px 10px;
     text-align: center;
-    
 }
 
 .base {
@@ -170,12 +169,11 @@ i {
     overflow-y: auto;
 }
 
-.titulo_carta{
+.titulo_carta {
     font-family: 'Lobster', cursive;
     color: #4d4d4d;
     justify-content: center;
     text-align: center;
     margin-top: 10px;
     font-size: 50px;
-
 }
