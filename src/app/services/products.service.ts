@@ -15,6 +15,11 @@ export class ProductsService {
       return data;
     }) );
   }
+  getProductsByCompanyId(id: string){
+    return this.http.get(`${url}/products/search?companyId=${id}`).pipe( map( (data: any) => {
+      return data;
+    }) );
+  }
   getProductsBySearch(type){
     return this.http.get(`${url}/products/searchP?q=${type}`).pipe( map( (data: any) => {
       return data;

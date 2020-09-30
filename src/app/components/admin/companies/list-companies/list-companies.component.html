@@ -1,1 +1,59 @@
-<p style="color: black;">list-companies works!</p>
+
+<div class="card m-4">
+
+    <div class="card-body">
+        <div class="row mb-lg-5">
+            <div class="col-md-8 col-sm-6 col-xs-6">
+                <h5 class="montserrat mt-3" style="font-size: 30px; color: black;">Información de Locales</h5>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-6" style="text-align: right;">
+                <button mat-fab [routerLink]="['/admin/locales/crear']" routerLinkActive="router-link-active" style="background-color: #F58F0D;"><span class="material-icons">
+                    add
+                    </span></button>
+            </div>
+        </div> </div>
+
+        <div class="card-columns" style="margin: 0 auto; float: none;">
+            <div class="col-md-12 " style="text-align: center;">
+                <div *ngFor="let item of companies; let i = index" class="card shadow mr-2 " style="width: 16rem; ">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 mb-2" style="text-align: center; ">
+                                
+                                <img [src]="item['icon']" width="60" height="50">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col md 12 manrope" style="text-align: left; color: black;">
+                                <span> <strong> </strong>{{item['name']}} </span><br>
+                                <span><strong>Correo: </strong> {{item['mail']}}</span><br>
+                                <span><strong>Teléfono:</strong>  </span><br>
+                                <span>{{item['telephone']}} </span><br>
+                                <span> <strong>Representante: </strong>  </span><br>
+                                <span><h6>{{item['representative']}} </h6> </span>
+                            </div>
+                        </div>
+
+                        <div class="row ">
+                            <div class="col-12 mt-4" style="text-align: center;">
+
+                                <button class="btn btn-light mr-5" style="padding: 1;
+                                border: 0 none;">
+                                    <span class="material-icons" style="color: #F58F0D;">
+                                        edit
+                                        </span>
+                                </button>
+                                <button  class="btn btn-light" style="padding: 1;
+                                border: 0 none;">
+                                    <span class="material-icons">
+                                        delete
+                                        </span>
+                                </button>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>

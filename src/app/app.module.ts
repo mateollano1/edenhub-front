@@ -38,6 +38,8 @@ import { AboutComponent } from './components/about/about.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { ListCompaniesComponent } from './components/admin/companies/list-companies/list-companies.component';
 import { ListProductsComponent } from './components/admin/products/list-products/list-products.component';
+import { CreateCompaniesComponent } from './components/admin/companies/create-companies/create-companies.component';
+import { CreateProductsComponent } from './components/admin/products/create-products/create-products.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +61,9 @@ import { ListProductsComponent } from './components/admin/products/list-products
     AboutComponent,
     AdminComponent,
     ListCompaniesComponent,
-    ListProductsComponent
+    ListProductsComponent,
+    CreateCompaniesComponent,
+    CreateProductsComponent
   ],
   imports: [
     BrowserModule,
