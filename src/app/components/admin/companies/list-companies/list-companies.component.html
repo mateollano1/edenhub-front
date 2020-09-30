@@ -1,4 +1,3 @@
-
 <div class="card m-4">
 
     <div class="card-body">
@@ -11,49 +10,43 @@
                     add
                     </span></button>
             </div>
-        </div> </div>
+        </div>
+    </div>
 
-        <div class="card-columns" style="margin: 0 auto; float: none;">
-            <div class="col-md-12 " style="text-align: center;">
-                <div *ngFor="let item of companies; let i = index" class="card shadow mr-2 " style="width: 16rem; ">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-12 mb-2" style="text-align: center; ">
-                                
-                                <img [src]="item['icon']" width="60" height="50">
-                            </div>
+    <div class="card-columns" style="margin: 0 auto; float: none;">
+        <div class="col-md-12 col-md-8 col-sm-6" style="text-align: center;">
+            <div *ngFor="let item of companies; let i = index" class="card shadow mr-2 " style="width: 38rem; ">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-5 mb-2 align-text-top" style="text-align: center;">
+                            <img [src]="item['icon']" height="70" class="mx-auto d-block">
                         </div>
-                        <div class="row">
-                            <div class="col md 12 manrope" style="text-align: left; color: black;">
-                                <span> <strong> </strong>{{item['name']}} </span><br>
-                                <span><strong>Correo: </strong> {{item['mail']}}</span><br>
-                                <span><strong>Teléfono:</strong>  </span><br>
-                                <span>{{item['telephone']}} </span><br>
-                                <span> <strong>Representante: </strong>  </span><br>
-                                <span><h6>{{item['representative']}} </h6> </span>
-                            </div>
+                        <div class="col-7 manrope" style="text-align: left; color: black;">
+                            <span> <strong> </strong>{{item['name']}} </span><br>
+                            <span><strong>Correo: </strong> {{item['mail']}}</span><br>
+                            <span><strong>Teléfono:</strong> {{item['telephone']}} </span><br>
+                            <span> <strong>Representante: </strong>  </span><br>
+                            <span><h6>{{item['representative']}} </h6> </span>
                         </div>
-
-                        <div class="row ">
-                            <div class="col-12 mt-4" style="text-align: center;">
-
-                                <button class="btn btn-light mr-5" style="padding: 1;
+                    </div>
+                    <div class="row ">
+                        <div class="col-12 mt-4" style="text-align: right;">
+                            <button class="btn btn-light mr-5" style="padding: 1;
                                 border: 0 none;">
                                     <span class="material-icons" style="color: #F58F0D;">
                                         edit
                                         </span>
                                 </button>
-                                <button  class="btn btn-light" style="padding: 1;
+                            <button class="btn btn-light" style="padding: 1;
                                 border: 0 none;">
-                                    <span class="material-icons">
+                                    <span class="material-icons" style="color: hsl(0, 100%, 55%);">
                                         delete
                                         </span>
                                 </button>
-                               
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div>
+    </div>
+    <div>
