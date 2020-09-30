@@ -11,6 +11,7 @@ export class CategoriesComponent implements OnInit {
   timeLeft: number = 60;
   interval;
   constructor() {
+    sessionStorage.setItem("ad", "false")
     this.loading = true
     this.interval = setInterval(() => {
       this.loading = false

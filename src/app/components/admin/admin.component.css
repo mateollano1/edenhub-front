@@ -1,0 +1,77 @@
+.example-container {
+    width: 100%;
+    height: 100%;
+}
+
+.disabled {
+    overflow-x: hidden;
+    /* overflow-y: scroll; */
+}
+
+.logout {
+    text-align: right;
+    margin-left: 3em;
+}
+
+.navbar {
+    border-left: #f4f3ef;
+    border-right: #f4f3ef;
+    border-top: #66615b;
+    border-bottom: #dddddd;
+    border-width: thin;
+    border-style: solid;
+}
+
+.primary {
+    color: #66615b;
+}
+
+.card.perfil {
+    width: 14, 8em;
+    height: 15em;
+    text-align: center;
+}
+
+.perfilName {
+    margin-top: 27px;
+    color: #66615b;
+    font-family: 'Montserrat';
+}
+
+.sidenavButton {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    cursor: pointer;
+    font-family: 'Montserrat';
+}
+
+.sidenavIcon {
+    font-size: 32px;
+    margin-right: 10px;
+}
+
+.imgRedonda {
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    /* border: 10px solid #666; */
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover,
+a:active {
+    color: lightgray;
+}
+
+.arrow-left {
+    text-align: right;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid #f4f3ef;
+}

@@ -13,7 +13,8 @@ export class SearchPageComponent implements OnInit {
   result:Boolean=false
   constructor(private route: ActivatedRoute,
               private router: Router,
-              private productsService: ProductsService) { 
+              private productsService: ProductsService) {
+    sessionStorage.setItem("ad", "false")
     this.route.queryParams.subscribe(params => {
       this.word = params['q'];
       productsService.getProductsBySearch(this.word).subscribe(data =>{

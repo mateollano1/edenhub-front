@@ -14,6 +14,7 @@ export class PresentationPageComponent implements OnInit {
     private companiesService: CompaniesService,
     private router: Router
   ) {
+    sessionStorage.setItem("ad", "false")
     window.scroll(0, 0);
   }
 

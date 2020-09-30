@@ -10,6 +10,9 @@ import { OrderTrackComponent } from './components/order-track/order-track.compon
 import { OrderTrackMoreDetailsComponent } from './components/order-track-more-details/order-track-more-details.component';
 import { LoginComponent } from './components/login/login.component';
 import { AboutComponent } from './components/about/about.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { ListCompaniesComponent } from './components/admin/companies/list-companies/list-companies.component';
+import { ListProductsComponent } from './components/admin/products/list-products/list-products.component';
 
 
 const routes: Routes = [
@@ -22,8 +25,19 @@ const routes: Routes = [
   { path: 'order/track', component: OrderTrackComponent },
   { path: 'order/track/:id', component: OrderTrackMoreDetailsComponent },
   { path: 'login', component: LoginComponent },
+  {
+    path: 'admin',
+    component: AdminComponent,
+    children: [
+      { path: 'locales', component: ListCompaniesComponent },
+      { path: 'productos', component: ListProductsComponent },
+      // { path: 'order/track', component: OrderTrackComponent },
+
+
+    ]
+  },
   { path: '', redirectTo: '', pathMatch: 'full' },
-  
+
   // { path: '**', component: PresentationPageComponent },
 ];
 

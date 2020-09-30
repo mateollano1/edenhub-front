@@ -18,6 +18,7 @@ export class FinishBuyComponent implements OnInit {
   constructor(private productsService: ProductsService,
     private router: Router,
     private clipboard: Clipboard) {
+    sessionStorage.setItem("ad", "false")
     window.scroll(0, 0);
   }
 

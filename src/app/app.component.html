@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+<app-navbar *ngIf="!admin"></app-navbar>
 <router-outlet></router-outlet>
-<app-contact-us></app-contact-us>
-<app-footer></app-footer>
+<app-contact-us *ngIf="!admin"></app-contact-us>
+<app-footer *ngIf="!admin"></app-footer>

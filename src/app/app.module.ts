@@ -25,12 +25,19 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
 import { OrderTrackComponent } from './components/order-track/order-track.component';
 import { OrderTrackMoreDetailsComponent } from './components/order-track-more-details/order-track-more-details.component';
 import {ClipboardModule} from '@angular/cdk/clipboard';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 //Pipes
 import { PricePipe } from './pipes/price.pipe';
 import { NoItemsFoundComponent } from './components/shared/no-items-found/no-items-found.component';
 import { LoginComponent } from './components/login/login.component';
 import { AboutComponent } from './components/about/about.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { ListCompaniesComponent } from './components/admin/companies/list-companies/list-companies.component';
+import { ListProductsComponent } from './components/admin/products/list-products/list-products.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +56,10 @@ import { AboutComponent } from './components/about/about.component';
     PricePipe,
     NoItemsFoundComponent,
     LoginComponent,
-    AboutComponent
+    AboutComponent,
+    AdminComponent,
+    ListCompaniesComponent,
+    ListProductsComponent
   ],
   imports: [
     BrowserModule,
@@ -61,6 +71,10 @@ import { AboutComponent } from './components/about/about.component';
     FormsModule,
     ReactiveFormsModule,
     ClipboardModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatListModule,
+    MatSidenavModule,
     MatCarouselModule.forRoot()
   ],
   providers: [],

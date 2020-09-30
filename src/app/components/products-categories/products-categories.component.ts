@@ -17,7 +17,9 @@ export class ProductsCategoriesComponent implements OnInit {
   constructor(
     private productsService: ProductsService,
     private route: ActivatedRoute,
-  ) {}
+  ) {
+    sessionStorage.setItem("ad", "false")
+  }
 
   ngOnInit(): void {
     this.route.params.subscribe((params => {
