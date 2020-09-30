@@ -90,6 +90,10 @@
     width: 400px;
 }
 
+.quienes p {
+    font-size: 1.2rem;
+}
+
 .contenedor h1 {
     font-family: 'Lobster', cursive;
     color: #ffffff;

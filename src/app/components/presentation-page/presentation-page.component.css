@@ -16,7 +16,7 @@
         background: #FFEEAA;
     }
     .top-letter {
-        margin-top: 9em;
+        margin-top: 0.1rem;
     }
     .logo {
         width: 198px;
@@ -25,15 +25,16 @@
         height: 110%;
     }
     .resp-card {
-        margin-top: 4em;
         margin-bottom: 2em;
+    }
+    .titulo_carta {
+        font-size: 50px !important;
     }
 }
 
 @media (max-width: 380px) {
     .resp-card {
         overflow-y: hidden;
-        margin-top: 6em;
         margin-bottom: 4em;
     }
     .resp-back {
@@ -42,16 +43,18 @@
     .logo {
         width: 158px;
     }
+    .titulo_carta {
+        font-size: 35px !important;
+    }
 }
 
 @media (max-width: 600px) {
     .resp-card {
         overflow-y: hidden;
-        margin-top: 4em;
         margin-bottom: 4em;
     }
     .top-letter {
-        margin-top: 8em;
+        margin-top: 1em;
     }
     .logo {
         width: 175px;
@@ -82,6 +85,9 @@
         /* margin-left: -67px; */
         top: -80px;
         background: #FFEEAA;
+    }
+    .titulo_carta {
+        font-size: 35px !important;
     }
 }
 
@@ -135,7 +141,6 @@ i {
     height: 5rem;
     padding: 20px 10px 20px 10px;
     text-align: center;
-    margin-top: 10px;
 }
 
 .base {
@@ -162,4 +167,13 @@ i {
 
 .modal-body {
     overflow-y: auto;
+}
+
+.titulo_carta {
+    font-family: 'Lobster', cursive;
+    color: #4d4d4d;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 50px;
 }
