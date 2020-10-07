@@ -1,5 +1,5 @@
 <div style="color: black;">
-    <span>Seleccione un local: </span>
+    <h3>Seleccione un Local</h3>
     <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           --Seleccione--
@@ -25,49 +25,49 @@
             </div>
         </div> </div>
 
-        <div class="card-columns" style="margin: 0 auto; float: none;">
-            <div class="col-md-12 " style="text-align: center;">
-                <div *ngFor="let item of products; let i = index" class="card shadow mr-2 " style="width: 16rem; ">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-12 mb-2" style="text-align: center; ">
-                                
-                                <img [src]="item['images'][0]['url']" width="60" height="50">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col md 12 manrope" style="text-align: left; color: black;">
-                                <span> <strong> </strong>{{item['name']}} </span><br>
-                                <span><strong>precio: </strong> {{item['price']}}</span><br>
-                                <span><strong>descripción: :</strong>  </span><br>
-                                <span>{{item['description']}} </span><br>
-                                <span> <strong>items: </strong>  </span><br>
-                                <h6 *ngFor="let itemP of item.items"><span class="badge badge-secondary">{{itemP.name}} </span></h6>
-                                <span> <strong>items seleccionables: {{item['letSelectedItems']}}</strong>  </span><br>
-
-                            </div>
-                        </div>
-
-                        <div class="row ">
-                            <div class="col-12 mt-4" style="text-align: center;">
-
+        
+        <div class="conenedor-recetas">
+            <div *ngFor="let item of products; let i = index"  class="cont-tarjetas">
+                <div class="tarjetas">
+                        <div class="tarjeta-img">
+                            <div class="tarjeta-info">
+                                <div class=" manrope" style="text-align: left; color: black;">
+                                    <img [src]="item['images'][0]['url']" alt="Card image cap" style="width: 23rem; height: 23rem ;">
+                                    <span> <strong> </strong>{{item['name']}} </span><br>
+                                    <span><strong>precio: </strong> {{item['price']}}</span><br>
+                                    <span><strong>descripción: :</strong>  </span><br>
+                                    <span>{{item['description']}} </span><br>
+                                    <span> <strong>items: </strong>  </span><br>
+                                    <h6 *ngFor="let itemP of item.items"><span class="badge badge-secondary">{{itemP.name}} </span></h6>
+                                    <span> <strong>items seleccionables: {{item['letSelectedItems']}}</strong>  </span><br>
+    
+                                </div>
                                 <button class="btn btn-light mr-5" style="padding: 1;
                                 border: 0 none;">
-                                    <span class="material-icons" style="color: #F58F0D;">
-                                        edit
-                                        </span>
+                                <span class="material-icons" style="color: #F58F0D;">
+                                edit
+                                </span>
                                 </button>
-                                <button  class="btn btn-light" style="padding: 1;
+                                <button class="btn btn-light" style="padding: 1;
                                 border: 0 none;">
-                                    <span class="material-icons">
-                                        delete
-                                        </span>
+                                <span class="material-icons" style="color: hsl(0, 100%, 55%);">
+                                delete
+                                </span>
                                 </button>
-                               
                             </div>
+    
                         </div>
-                    </div>
+                        
+                        
                 </div>
+                
+                
             </div>
+            
+    
         </div>
+
+
+
+
         <div>
