@@ -27,6 +27,10 @@
     width: 25rem;
     padding: 1rem;
     margin-bottom: 3rem;
+    -webkit-box-shadow: 0px 0px 20px 17px rgba(0, 0, 0, 0.14);
+    -moz-box-shadow: 0px 0px 20px 17px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 0px 20px 17px rgba(0, 0, 0, 0.14);
+    margin: 1rem;
 }
 
 .tarjetas {
@@ -34,11 +38,26 @@
     align-items: center;
     justify-content: center;
 }
-h3{
+
+h3 {
     text-align: center;
     font-family: mordana;
-
 }
-.btn{
-text-align: center;
+
+.btn {
+    text-align: center;
+}
+
+.selcc-local {
+    margin-top: 2rem;
+}
+
+.selcc-local h3 {
+    font-family: 'Lobster', cursive;
+    font-size: 3rem;
+    margin-bottom: 1.7rem;
+}
+
+.dropdown {
+    text-align: center;
 }

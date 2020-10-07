@@ -1,5 +1,4 @@
 <div class="card d-xl-block">
-
     <div class="card-body">
         <div class="row mb-lg-5">
             <div class="col-md-8 col-sm-6 col-xs-6">
@@ -12,40 +11,31 @@
             </div>
         </div>
     </div>
-
-    
-
     <div class="conenedor-recetas">
-        <div *ngFor="let item of companies; let i = index"  class="cont-tarjetas">
+        <div *ngFor="let item of companies; let i = index" class="cont-tarjetas">
             <div class="tarjetas">
-                    <div class="tarjeta-img">
-                        <img class="tarjeta-img tam-img" [src]="item['icon']" alt="Card image cap">>
-
-                    </div>
-                    <div class="tarjeta-info">
-                        <span> <strong> </strong>{{item['name']}} </span><br>
-                        <span><strong>Correo: </strong> {{item['mail']}}</span><br>
-                        <span><strong>Teléfono:</strong> {{item['telephone']}} </span><br>
-                        <span> <strong>Representante: </strong>  </span><br>
-                        <span><h6>{{item['representative']}} </h6> </span>
-                        <button class="btn btn-light mr-5" style="padding: 1;
+                <div class="tarjeta-img">
+                    <img class="tarjeta-img tam-img" [src]="item['icon']" alt="Card image cap">
+                </div>
+                <div class="tarjeta-info">
+                    <span> <strong> </strong>{{item['name']}} </span><br>
+                    <span><strong>Correo: </strong> {{item['mail']}}</span><br>
+                    <span><strong>Teléfono:</strong> {{item['telephone']}} </span><br>
+                    <span> <strong>Representante: </strong>  </span><br>
+                    <span><h6>{{item['representative']}} </h6> </span>
+                    <button class="btn btn-light mr-5" style="padding: 1;
                         border: 0 none;">
                         <span class="material-icons" style="color: #F58F0D;">
                         edit
                         </span>
                         </button>
-                        <button class="btn btn-light" style="padding: 1;
+                    <button class="btn btn-light" style="padding: 1;
                         border: 0 none;">
                         <span class="material-icons" style="color: hsl(0, 100%, 55%);">
                         delete
                         </span>
                         </button>
-                    </div>
-                    
+                </div>
             </div>
-            
-            
         </div>
-        
-
     </div>

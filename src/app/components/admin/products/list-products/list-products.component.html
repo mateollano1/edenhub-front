@@ -1,13 +1,13 @@
-<div style="color: black;">
-    <h3>Seleccione un Local</h3>
+<div class="selcc-local" style="color: black;">
+    <h3 class="">Seleccione un Local</h3>
     <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-secondary dropdown-toggle col-auto-12" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           --Seleccione--
         </button>
-        <div  class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a *ngFor="let item of companies"  (click)="selected(item._id)" class="dropdown-item" >{{item.name}}</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a *ngFor="let item of companies" (click)="selected(item._id)" class="dropdown-item">{{item.name}}</a>
         </div>
-      </div>
+    </div>
 </div>
 
 
@@ -23,51 +23,52 @@
                     add
                     </span></button>
             </div>
-        </div> </div>
+        </div>
+    </div>
 
-        
-        <div class="conenedor-recetas">
-            <div *ngFor="let item of products; let i = index"  class="cont-tarjetas">
-                <div class="tarjetas">
-                        <div class="tarjeta-img">
-                            <div class="tarjeta-info">
-                                <div class=" manrope" style="text-align: left; color: black;">
-                                    <img [src]="item['images'][0]['url']" alt="Card image cap" style="width: 23rem; height: 23rem ;">
-                                    <span> <strong> </strong>{{item['name']}} </span><br>
-                                    <span><strong>precio: </strong> {{item['price']}}</span><br>
-                                    <span><strong>descripción: :</strong>  </span><br>
-                                    <span>{{item['description']}} </span><br>
-                                    <span> <strong>items: </strong>  </span><br>
-                                    <h6 *ngFor="let itemP of item.items"><span class="badge badge-secondary">{{itemP.name}} </span></h6>
-                                    <span> <strong>items seleccionables: {{item['letSelectedItems']}}</strong>  </span><br>
-    
-                                </div>
-                                <button class="btn btn-light mr-5" style="padding: 1;
+
+    <div class="conenedor-recetas">
+        <div *ngFor="let item of products; let i = index" class="cont-tarjetas">
+            <div class="tarjetas">
+                <div class="tarjeta-img">
+                    <div class="tarjeta-info">
+                        <div class=" manrope" style="text-align: left; color: black;">
+                            <img [src]="item['images'][0]['url']" alt="Card image cap" style="width: 23rem;">
+                            <span> <strong> </strong>{{item['name']}} </span><br>
+                            <span><strong>precio: </strong> {{item['price']}}</span><br>
+                            <span><strong>descripción: :</strong>  </span><br>
+                            <span>{{item['description']}} </span><br>
+                            <span> <strong>items: </strong>  </span><br>
+                            <h6 *ngFor="let itemP of item.items"><span class="badge badge-secondary">{{itemP.name}} </span></h6>
+                            <span> <strong>items seleccionables: {{item['letSelectedItems']}}</strong>  </span><br>
+
+                        </div>
+                        <button class="btn btn-light mr-5" style="padding: 1;
                                 border: 0 none;">
                                 <span class="material-icons" style="color: #F58F0D;">
                                 edit
                                 </span>
                                 </button>
-                                <button class="btn btn-light" style="padding: 1;
+                        <button class="btn btn-light" style="padding: 1;
                                 border: 0 none;">
                                 <span class="material-icons" style="color: hsl(0, 100%, 55%);">
                                 delete
                                 </span>
                                 </button>
-                            </div>
-    
-                        </div>
-                        
-                        
+                    </div>
+
                 </div>
-                
-                
+
+
             </div>
-            
-    
+
+
         </div>
 
 
+    </div>
 
 
-        <div>
+
+
+    <div>
