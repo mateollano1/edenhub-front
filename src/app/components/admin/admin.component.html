@@ -2,8 +2,7 @@
     <mat-drawer style="width: 19em ;" mode="{{mode}}" #drawer opened>
         <div class="card perfil">
             <div class="card-body">
-                <img src="../assets/imgs/favicon.png"
-                    class="imgRedonda" alt="Cinque Terre">
+                <img src="../assets/imgs/favicon.png" class="imgRedonda" alt="Cinque Terre">
                 <div class="perfilName">
                     <h6>Eden Hub</h6>
                 </div>
@@ -12,11 +11,11 @@
         <div style="margin-left: 2em ">
             <mat-list role="list">
 
-                <mat-list-item class="sidenavButton" (click)="changeColor(0)"  [ngStyle]="{color: inventarioColor}" [routerLink]="['/admin/locales']">
+                <mat-list-item class="sidenavButton" (click)="changeColor(0)" [ngStyle]="{color: inventarioColor}" [routerLink]="['/admin/locales']">
                     <span class="material-icons sidenavIcon">
                     assignment 
                     </span> LOCALES</mat-list-item>
-                <mat-list-item class="sidenavButton" (click)="changeColor(4)"  [ngStyle]="{color: puntosV}" [routerLink]="['/admin/productos']">
+                <mat-list-item class="sidenavButton" (click)="changeColor(4)" [ngStyle]="{color: puntosV}" [routerLink]="['/admin/productos']">
                     <span class="material-icons sidenavIcon">
                             attach_money
                                                     </span> PRODUCTOS</mat-list-item>
@@ -29,15 +28,15 @@
                     event_note 
                                     </span> CUADRE CAJA</mat-list-item>-->
 
-                                    <mat-list-item class="sidenavButton" (click)="changeColor(2)"  [ngStyle]="{color: inventarioColor}" [routerLink]="['/admin/cajadiaria']">
-                                        <span class="material-icons sidenavIcon">
+                <mat-list-item class="sidenavButton" (click)="changeColor(5)" [ngStyle]="{color: reporteColor}" [routerLink]="['/admin/cajadiaria']">
+                    <span class="material-icons sidenavIcon">
                                         assignment 
                                         </span> CUADRE CAJA</mat-list-item>
             </mat-list>
         </div>
     </mat-drawer>
     <mat-drawer-content class="disabled" style="background-color: #f4f3ef; ">
-        <div class="row"  >
+        <div class="row">
             <mat-toolbar class="navbar">
                 <div class="col-md-8">
 
