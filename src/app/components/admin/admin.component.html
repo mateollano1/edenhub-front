@@ -25,9 +25,14 @@
                                                         person_pin
                                                                     </span> PROMOCIONES</mat-list-item>
 
-                <mat-list-item class="sidenavButton" (click)="changeColor(5)" [ngStyle]="{color: reporteColor}"><span class="material-icons sidenavIcon">
+                <!--<mat-list-item class="sidenavButton" (click)="changeColor(5)" [ngStyle]="{color: reporteColor}"><span class="material-icons sidenavIcon">
                     event_note 
-                                    </span> CUADRE CAJA</mat-list-item>
+                                    </span> CUADRE CAJA</mat-list-item>-->
+
+                                    <mat-list-item class="sidenavButton" (click)="changeColor(2)"  [ngStyle]="{color: inventarioColor}" [routerLink]="['/admin/cajadiaria']">
+                                        <span class="material-icons sidenavIcon">
+                                        assignment 
+                                        </span> CUADRE CAJA</mat-list-item>
             </mat-list>
         </div>
     </mat-drawer>

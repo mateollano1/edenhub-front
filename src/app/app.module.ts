@@ -40,6 +40,10 @@ import { ListCompaniesComponent } from './components/admin/companies/list-compan
 import { ListProductsComponent } from './components/admin/products/list-products/list-products.component';
 import { CreateCompaniesComponent } from './components/admin/companies/create-companies/create-companies.component';
 import { CreateProductsComponent } from './components/admin/products/create-products/create-products.component';
+import { BoxDayComponent } from './components/admin/box-day/box-day.component';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,7 +67,11 @@ import { CreateProductsComponent } from './components/admin/products/create-prod
     ListCompaniesComponent,
     ListProductsComponent,
     CreateCompaniesComponent,
-    CreateProductsComponent
+    CreateProductsComponent,
+    BoxDayComponent,
+    
+    
+    
   ],
   imports: [
     BrowserModule,

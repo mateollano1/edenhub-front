@@ -15,6 +15,7 @@ import { ListCompaniesComponent } from './components/admin/companies/list-compan
 import { ListProductsComponent } from './components/admin/products/list-products/list-products.component';
 import { CreateCompaniesComponent } from './components/admin/companies/create-companies/create-companies.component';
 import { CreateProductsComponent } from './components/admin/products/create-products/create-products.component';
+import { BoxDayComponent } from './components/admin/box-day/box-day.component';
 
 
 const routes: Routes = [
@@ -33,6 +34,7 @@ const routes: Routes = [
     children: [
       { path: 'locales', component: ListCompaniesComponent },
       { path: 'productos', component: ListProductsComponent },
+      { path: 'cajadiaria', component: BoxDayComponent },
       { path: 'locales/crear', component: CreateCompaniesComponent },
       { path: 'productos/crear', component: CreateProductsComponent },
       // { path: 'order/track', component: OrderTrackComponent },
