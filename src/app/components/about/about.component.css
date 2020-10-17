@@ -1,3 +1,7 @@
+* {
+    max-width: 100%;
+}
+
 @media (max-width: 600px) {
     .item {
         margin-top: 2em;
@@ -61,4 +65,44 @@
     /* background-attachment: fixed; */
     background-size: cover;
     border-radius: .75em;
+}
+
+.contenedor ul {
+    list-style: none;
+}
+
+.contenedor {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.quienes {
+    justify-content: center;
+    align-items: center;
+}
+
+.quienes img {
+    width: 400px;
+}
+
+.quienes p {
+    font-size: 1.2rem;
+}
+
+.contenedor h1 {
+    font-family: 'Lobster', cursive;
+    color: #ffffff;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 70px;
+}
+
+.bg-img {
+    background-image: url("../../../assets/imgs/bd-img.jpg");
 }
