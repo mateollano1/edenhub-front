@@ -1,25 +1,35 @@
-<div class="background-bill centerCard" style="height: 47%;">
+<div class="background-bill centerCard contenedor" style="height: 70%;">
     <!-- <div class="card centerCard center " style="height: 6em; width: 25em; margin-top: 9em;">
         <span class="quickSand " style="font-size: 55px; color: #280B0B;">
     Catálogo
 </span>
     </div> -->
+    <div>
+        <div class="col-md-12 mt-5 mb-3 contenedor" style="font-size: 35px;">
+            <h1> ¡Finalizar Compra! </h1>
+        </div>
+        <div class="col-md-12 mt-5 mb-3 quickSand quienes text-center">
+            <h2>Esta es la parte más Fácil.</h2>
+        </div>
+    </div>
+
 </div>
 <div class="row mb-5" style="width: 100%;">
-    <div class="col-md-4 ml-5 mt-5">
+    <!--<div class="col-md-4 ml-5 mt-5">
         <span class="quickSand saludo" style="margin-top: 10em;">
         ¡Finalizar Compra!
     </span>
         <p style="margin-top: 20px;">
             Esta es la parte más Fácil.
         </p>
-        <p style="text-align: justify;"> 
+        <p style="text-align: justify;">
             Puedes pagar directamente a nuestro domiciliario en efectivo, o solicitar QR al momento de recibir tu producto.
         </p>
         <p style="text-align: justify;"> <small>** Estamos trabajando para proximamente tener más formas de pago.</small></p>
-    </div>
-    <div class="col-md-7 mt-5 centerCard">
-        <div class="card shadow-lg ml-4" style="width: 100%; height: 20em;  border-radius: 1.25rem!important; overflow-y: scroll;border-color: #FFEEAA; border-width: 5px;">
+    </div>-->
+
+    <div class="col-md-6 mt-5 centerCard order-0 order-sm-1 order-md-1">
+        <div class="card shadow-lg ml-4" style="width: 100%; height: 30em;  border-radius: 1.25rem!important; overflow-y: scroll;border-color: #ffffff; border-width: 5px;">
             <h5 class="card-title mt-4 center montserrat"><strong> Resumen de tu Compra:</strong> </h5>
             <div class="card-body">
                 <table class="table table-responsive-sm table-borderless">
@@ -33,8 +43,8 @@
                     </thead>
                     <tbody class="montserrat">
                         <tr *ngFor="let item of products; let i = index">
-                            <th scope="row" *ngIf="item.product.type !== '-1'" style="width: 10px;"><img class="button" (click)="deleteProduct(i)" src="/../../assets/imgs/delete.png" width="18px"  style="cursor:pointer;" ></th>
-                            <th scope="row" *ngIf="item.product.type == '-1'" style="width: 10px;"><img  src="/../../assets/imgs/motorcycle.png" width="18px"  style="cursor:pointer;" ></th>
+                            <th scope="row" *ngIf="item.product.type !== '-1'" style="width: 10px;"><img class="button" (click)="deleteProduct(i)" src="/../../assets/imgs/delete.png" width="18px" style="cursor:pointer;"></th>
+                            <th scope="row" *ngIf="item.product.type == '-1'" style="width: 10px;"><img src="/../../assets/imgs/motorcycle.png" width="18px" style="cursor:pointer;"></th>
                             <th scope="row">{{item.product.name}}</th>
                             <th scope="row">{{item.ammount}}</th>
                             <th scope="row">{{item.price | price }}</th>
@@ -50,14 +60,12 @@
             </div>
         </div>
     </div>
-</div>
 
-<div class="row formu" style="width:100%;">
-    <div class="col-md-6 mt-5 ">
+    <div class="col-md-6 mt-5 formu order-1 order-sm-0">
         <p class="centerCard" style="font-size: 20px;">
             Te pedimos completes la siguiente información para llevar lo más pronto posible tu pedido:
         </p>
-        <form [formGroup]='bill' >
+        <form [formGroup]='bill' class="">
             <div class="form-group">
                 <label for="formGroupExampleInput">Nombre y Apellidos <span style="color: brown; font-size: 10px;">(* campo requerido)</span></label>
                 <input type="text" formControlName="name" class="form-control" id="formGroupExampleInput">
@@ -75,7 +83,7 @@
                 <textarea class="form-control" formControlName="note" id="exampleFormControlTextarea1" rows="3" placeholder="¿Quieres dejarnos alguna nota o indicación? Este es el lugar."></textarea>
             </div>
             <div class="center mb-5">
-                <button (click)="savePurchase()" class="btn" style="background-color: #008000; color: white ;" >Finalizar Compra</button>
+                <button (click)="savePurchase()" class="btn" style="background-color: #ff6600; color: white ;">Finalizar Compra</button>
             </div>
         </form>
 
